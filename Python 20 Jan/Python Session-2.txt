@@ -1,0 +1,41 @@
+Last Session
+-----------------------
+OVerview of python
+Python Environment
+Variable & data type
+Operator
+Condition
+Input/Output
+
+
+Today's Topic
+================================================
+Loop	: is iterator or repeation of statement
+-------------------------------------------------
+
+Example:
+	1 2 ...100
+	100 99	... 1
+There are following fundamental of loop:
+	i. intialization / start 		: 1		100
+	ii. condition /limit			: 100		1
+	iii. increment/decrement/step 		: +1		-1
+
+
+
+There are following types of loop:
+	i. while
+	ii. for 
+
+List : is collection is data , list can considered as array 
+================================================================
+a = []	# single dimenssion 
+a = [[1,2,3],[3,4,5]] # tabular / 2 dimnession 
+
+
+
+
+
+Touple
+Dictionary
+
