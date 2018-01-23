@@ -1,0 +1,65 @@
+What is Python?
+Why Python?
+Python Environment Setup
+First Program
+Varible and Data Type
+Syntax
+Condition 
+Loop
+-----------------------------------------
+What is Python?
+	- is open source
+	- is progaraming,scripting,object oriented programing language 
+	- program : is logic or instructions 
+	- script  : python is interpreter based programing language 
+		  : execute line by line 
+	- object  : real time based 
+
+	-version :latest to older
+		 : 3.6**, 3.5**,3.4**.......... 2.7**, 2.6...
+
+Why Python?
+	-Machine learning, D.S., AI, Bigdata , Stat, Analysis 
+	-Development: Django 
+	-Automation Testing: selenium 
+	-E.H
+	
+Python Environment :
+	-Console/Command line 
+	-IDLE/GUI : extension of file must be either .py/.pyw 
+	-Editor/IDE :
+			-pyCharm 
+			-Atom
+			-Spyder
+			-Visual Studio Code
+			-Visual Studio
+			-Netbeans 
+			etc.
+
+	
+First Program
+	
+	-syntax
+		-is identation based programing language 
+		-python does allocate memory automatically 
+		-#   : single line comment 
+		-
+			'''
+			'''
+			"""
+			"""
+		-[]	: list / array 
+		-{}	: dictionary 
+		-()	: function 
+		-:	: body/block of class, function, condition , loop etc.
+
+
+
+	-indentifier/keyword 
+
+
+	
+	 
+	
+	 
+		  
