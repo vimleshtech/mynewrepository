@@ -1,0 +1,89 @@
+OOPS: object oriented programing system/structure 
+====================================================
+Object : real time things 
+Oriented : real time based
+
+Advantage of OOPS:
+i. Support to modular approach , large application or program can be written in small set of code
+ii Reusbility code 
+iii. Easy to manage source code 
+
+
+There are following fundamentals of oops:
+-class
+-object
+-encapsulation 
+-abstraction/data hiding
+-constructor
+
+-inheritence
+-polymorphisam
+-abstract class
+-interface 
+
+*access specifier 
+*modifier  : static
+		-can be access without object 
+		-single memory allocation 
+*keywords: this, final, static , super, extends, implements etc.
+
+
+
+-class : is wrapper of data member/variable and function/methods
+==================================================================
+
+class Employee
+{
+	
+
+}
+
+
+-object: is an instance of class 
+===============================
+Employee e = new Employee();  // new is keyword , to allocate the memory 
+				//Employee() : invoke to  default constructor 
+
+
+-encapsulation : is wrapping data member and function in single/one unit, every class is by default encapsulated 
+===============================
+
+
+-abstraction/data hiding: to provide the accessbility for function and hide the defintion i.e. known as abstrtraction 
+======================================
+
+
+*access specifier 
+=================================
+keyword		within_class	in_child_class	 within_package    anywhere
+--------	-----------	-------------	--------------	   ---------
+private			y		n		n		n
+protected		y		y		n		n
+default/no keyword	y		y		y		n
+public			y		y		y		y
+
+
+
+-constructor : function will have same name as name of the class i.e function is known as constructor 
+============================
+-constrctor execute automatically when object will create
+-constructor cannot have return type
+-constructor cannot be invoke explicitilly 
+
+There are following types of constructor :
+	-default/without parameter
+	-with argument
+	-copy constructor 
+	
+
+
+
+
+
+
+
+		
+
+
+
+
