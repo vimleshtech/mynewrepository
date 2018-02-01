@@ -1,0 +1,34 @@
+continue			: skip the current iteration 
+break				: to terminate the loop 
+function - system defined 	:
+------------------------
+input()
+print()
+max()
+min()
+sum()
+sort()
+append()
+split()
+replace()
+remove()
+subString()
+int()
+str()
+float()
+etc.
+
+
+file hanlding 			:
+
+
+exception handling
+regular expression 
+OOPS
+Networking
+Thread
+GUI
+Database
+
+
+
