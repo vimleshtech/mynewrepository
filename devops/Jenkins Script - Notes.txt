@@ -1,0 +1,22 @@
+pipleline{: is set of instructions/steps 
+	agent{  } : framework 
+	stages{
+		stage{
+		steps{{  //set of command 
+		sh ''
+		}
+		
+
+		}
+	
+	}
+	
+
+
+docker 'node:6.3': framework 
+'build'		: build, test, deploye
+sh 'ruby --version'
+
+
+
+}

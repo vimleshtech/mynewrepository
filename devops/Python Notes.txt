@@ -1,0 +1,31 @@
+Python: is programing, scripting, object oriented programing language 
+=========================================
+Environment:
+------------
+-console/command line
+-IDLE/GUI : scripting 
+-Editor : vs code, atom, netbeans, eclipse etc. 
+
+Python Version:
+--------------------
+3.6, 3.5,2.4,3.3......... 2.7,2.6....
+
+2.7, 3.4,3.5,3.6
+
+Extension of python file must be .py/.pyw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
