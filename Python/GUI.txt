@@ -1,0 +1,73 @@
+lower to upper case and upper lower case
+==========================================
+abc = 97
+A = 65  
+
+
+s ="abcd"
+d = list(s) = a, b, c
+
+for i in d:
+	o  = int(i)
+	if o>=65 and o<=90:
+		o = o+32
+	elif o>=97 and o<= 122:
+			o = o-32
+
+
+s ="this is python program"
+d = s.split(' ')
+for e in d:
+	o = e[0:1].upper()+e[1:len(e)].lower()
+	print(o)
+
+
+-----------------
+GUI: graphical user interface : standalone application 
+
+***CGI: common gateway interface : web browser ***
+test.py
+-----------
+print("<html>")
+print("<head>")
+print("</head>")
+print("</html>")
+
+
+index.html
+-----------------
+<html>
+<head>
+	<title> first page </title>
+</head>
+<body
+	<h1> web page </h1>	
+	<form action="" method="">
+
+
+	</form>
+
+</body>
+</html>
+
+
+
+https://www.google.co.in/?gfe_rd=cr&dcr=0&ei=yDR0Wu7KBK6mX5OiiJAH
+
+?gfe_rd=cr&dcr=0&ei=yDR0Wu7KBK6mX5OiiJAH : query string 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

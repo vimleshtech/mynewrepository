@@ -1,0 +1,155 @@
+<html>
+<head>
+	<title> first page-1 </title>
+
+	<script>
+		
+	function test()
+	{
+
+		alert("test");
+
+	}
+
+	function compute(){
+		//var a;//within function 
+		//a ; // can be access cross the function 
+		//let a; //within same block 
+		
+		var qty,price,total;
+		
+		qty = document.getElementById('qty').value;
+		price = document.getElementById('price').value;
+
+
+		total = qty*price;
+
+		document.getElementById('out').innerHTML = total;
+
+
+		//alert("Total price "+total);
+
+	
+
+	}
+
+	function showTable(){
+
+
+		var r,c;
+		r = document.getElementById('row').value;	
+		c = document.getElementById('col').value;
+
+
+		var s ="<table>";
+
+		for(let i=0; i<r; i++)
+		{
+
+			s +="<tr>";
+			for(let k=0; k<c; k++)
+			{
+				s +="<td> <input type='text' /> </td>";
+
+			}
+			s +="</tr>";
+
+		}
+	
+		s +="</table>";
+
+
+		document.getElementById('tout').innerHTML= s;
+
+
+
+
+	}
+	</script>
+</head>
+<body>
+	<h1> web page </h1>	
+	<form action="" method="">
+
+		<p>
+		First Name : <input type="text" />		
+		</p>
+		<p>
+		Last Name : <input type="text" />		
+		</p>
+		<p>
+		Gender : <input type="radio" name="g" />		Male
+			<input type="radio" name="g"/>		Female
+		
+		</p>
+			
+		<p>
+
+		Country : <select>
+			<option> Select </option>
+			<option> India </option>
+			<option> US </option>
+			<option> UK </option>	
+			</select>
+
+		</p>
+		<p>
+
+		Hobbies : <input type="checkbox" /> Singing
+			 <input type="checkbox" /> Dancing 
+			
+		</p>
+
+
+		<p>
+
+			<input type="button" value="Reset" />
+			<input type="button" onclick="test()" value="Submit" />
+		</p>
+
+
+		<hr/>
+<p>
+		Product Qty : <input onkeyup="compute()" type="text" id="qty" />		
+		</p>
+<p>
+		Product Price : <input onkeyup="compute()" type="text" id="price" />		
+		</p>
+
+		<p>
+			Total Price : <span id="out"> </span>
+			
+		</p>
+
+		<p>
+
+
+			<input type="button" onclick="compute()" value="compute" />
+		</p>
+
+
+		<hr/>
+
+		<p>
+			# of Rows : <input type="text" id="row" />
+		</p>
+		<p>
+			# of Cols : <input type="text" id="col" />
+		</p>
+
+		<p>
+			<input type="button" value="Show Table" onclick="showTable()"/>
+		</p>
+
+		<p id="tout">
+		</p>
+
+	</form>
+
+
+
+
+
+
+</body>
+</html>
