@@ -1,0 +1,59 @@
+break		: to terminate the loop iteration 
+contiue/next	: to skip current itreration 
+switch		: return value from given list/items based on index 
+packages	: is set inbuilt functions / is also known as library 
+
+decision tree   : 
+
+break	: to terminate the loop interation 
+============================
+i <-1
+while (i<10){
+
+	if(i%%3==0){
+		break
+	}
+	print(i)
+
+	i=i+1
+
+}
+
+output: 1 2 
+contiue/next	: to skip current itreration 
+================================
+i <-1
+while (i<10){
+	
+  	i=i+1  	
+
+	if(i%%3==0){
+		next
+	}
+	print(i)
+
+}
+
+output: 1 2 4 5 7 8 
+
+switch		: return value from given list/items based on index 
+===============================
+	switch(2,"red","green","blue")
+
+
+example:
+----------
+ch = readline(prompt = "enter data ")
+ch = as.numeric(ch)
+
+switch(ch,"red","green","blue")
+
+
+packages	: is set inbuilt functions / is also known as library 
+===========================================================
+-how to install package 
+install.packages("pkgname")		# one time installation required on every pc/device 
+-how to load package to our program or session 
+library(pkgname)			# in every session 
+
+
