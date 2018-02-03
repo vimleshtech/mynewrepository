@@ -1,0 +1,67 @@
+-overview of java
+-environment setup 
+-indentifier / keywords : if , else, int, float 
+-syntax
+-project structure 
+-data type and variable	**
+-oprator 
+	arithmetic:
+	+ - * / %
+	conditional:
+	> >= < <= == !=
+	etc.	
+-condtional statement
+-loop
+-array 
+
+
+Q.proper case
+--------------------------
+name = "raman kumar sinha" = Raman Kumar Sinha
+
+-123433 = count of 3?
+-power
+=================
+
+-exception handling
+==========================
+exception : is error which may or may not occur 
+handling  : customization of error message,store the log ,
+		prevent the program from failure due to single error 
+
+
+There are following inbuilt keywords:
+-try
+-catch:
+	FileNotFoundException
+	Exception			**generic class which can hold any types of error 
+	ArithmeticException
+	ArrayOutOfIndex/..
+
+	*multiple catch block can be used with one try 
+	*neste try catch : try inside try 
+
+-finally: will execute always either error will occur or not 
+	
+-throw 	
+-throws 
+
+
+
+
+
+--------------------------
+-data handling	-> read data from file 
+--------------------
+.open source file system,(.txt,.dat,.csv, xml, json etc.)
+.application file system(.xls, .xlsx,  etc.)
+.odbc/jdbc		ms access
+		oracle, sql,
+
+
+Q.. wap to get count of rows in file
+Q.. wap to get count of word in file
+Q.. wap to get count of particular word in file
+Q.. wap to get count of every word in file 
+
+
