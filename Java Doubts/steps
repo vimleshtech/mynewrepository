@@ -1,0 +1,17 @@
+JDBC
+------------------------------
+Jar 	: Apache POI
+Step to add jar file:
+	step1 : right click on project
+	step2 : go to properties
+	step3: go to java build path
+	step4: go to library
+	step5: add external jars -> browser file then open 
+
+
+
+File Handling (Excel Interaction)
+-----------------------------------
+
+
+Testng 
