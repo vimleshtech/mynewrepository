@@ -1,0 +1,86 @@
+-loop
+-cluster analysis 
+-chi-square 
+-Anova
+-GLM
+-Hypothesis testing
+
+-loop : is iterator or repeation of statement 
+=====================
+Syntax:
+	do y =1  to 10    * default incrementer is 1
+		...
+		...
+	end;
+		
+
+	do y =1  to 10   by 2
+
+		...
+		...
+	end;
+		
+	do y =10  to 1   by -1
+
+		...
+		...
+	end;
+
+
+i = 1 to 100
+	if i %9 ==  0
+	 break
+
+
+
+Fundamental of loop:
+-init 		/ start point
+-condition 	/ limit
+-increment/decrement/ steps 	
+
+%macro  <mname>;
+
+	%do i =1 %to 10 %by .5
+
+		col&i    
+	%end;
+
+%mend <mname>;
+
+
+
+//call to marcor or invoke to macro 
+
+VAR %<mname>;
+
+produces the following complete VAR statement:
+
+VAR COL1_LINE1 COL2_LINE1 ... COL50_LINE1;
+
+
+
+data newdata;
+infile ....;
+input VAR %<mname>;
+run;
+
+
+
+proc print newdata;
+VAR %<mname>;
+run;
+
+
+
+---------------
+sales
+--------
+v1 v2 v3 v4  ... v100
+----------------------
+
+v[i]= v[i]*1.10;
+
+
+
+
+			
