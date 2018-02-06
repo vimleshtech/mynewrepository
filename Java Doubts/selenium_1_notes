@@ -1,0 +1,83 @@
+max / min 
+	****
+how many times any number present:
+date format in excel 
+
+==========================================
+Selenium : is library files or library files to automate web site/application 
+	-web automation 
+	-automation testing required for regression testing 
+
+	
+Components of selenium:
+ -Webdriver: scripting / coding / framwork 
+ -RC/Grid: multiple browser testing , run/execute testcae on multiploe device 
+ -Selenium IDE : record and play 
+
+How to setup environment for selenium?
+=========================================
+-jdk		: 1.6,1.7,1.8,1.9
+-eclipse 	: oxygen, neon, mars, juno, luna etc. 
+-selenium api/jar files / librrary files 
+		: 3.9,3.8,3.7,3.6 ***
+	https://www.nuget.org/packages/Selenium.WebDriver
+
+		
+-webdriver : geckodriver
+	   : v19, V18 ....
+		https://github.com/mozilla/geckodriver/releases
+		
+	
+
+There are following inbuilt class/library/function of webdriver:
+===========================
+WebDriver			: interface 
+FirefoxDriver			: class
+ChromeDriver			: class
+InternetExplorerDriver		: class 
+
+get()				: open url in browser 
+getTitle()			: return page title 
+getCurrentURL()			: return current page url 
+getPageSource()			: return web page source code
+
+findElement()			: search html or web element 
+By.id()				: search by id 
+By.name()
+By.linkText()			: search by hyperlink text/ anchor text
+click()				: event : mouse click 
+sendKeys()			: enter or send data in textbox 
+clear()				: remove existing data
+etc.
+
+
+How to find html control manually?
+===================================
+->right click on control/html textbox.... 
+	-> click on "inspect element"
+
+
+HTML : hypetext markup language
+     : tags / html element/ web element/ web control 
+	
+
+	example:
+		<input type='text' id="fn" name="abc" class="aaa" />
+
+
+Property of web element/tag:
+	-id
+	-class
+	-name
+	-type
+	-value 
+	etc. 		
+		
+
+
+
+
+ 
+
+ 
+
