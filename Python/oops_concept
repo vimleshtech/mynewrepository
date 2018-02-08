@@ -1,0 +1,45 @@
+Overview of Python
+Environment
+Syntax
+Input/Output (IO)
+variable  & Data type 
+===========================
+
+OOPS:object oriented programing structure/system 
+==========
+object : real world group or entity or terms 
+oriented : for readl world object/group
+program : set of instructions/code/statement 
+system : layout /structure 
+
+Fudamental of oops:
+-class	: is wrapper of data member and function 
+-object : is instannce of class 
+
+
+
+a =1
+b= [val1,val2,val3...]
+c = {key1:value,d:'delta'}  : dictionary 
+
+
+b[0]  
+		val1
+c[d] 
+		delta
+
+
+
+
+employees{
+
+{name:abcd,age:34},
+{name:abcd,age:34},
+{name:abcd,age:34},
+{name:abcd,age:34},
+{name:abcd,age:34},
+{name:abcd,age:34},
+{name:abcd,age:34},
+
+
+}|
