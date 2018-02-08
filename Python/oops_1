@@ -1,0 +1,43 @@
+#employee - class
+class emp:
+
+     def addEmp(a):
+          print('inside add emp ',a)
+
+
+     def showEmp(b):
+          print('inside show emp ',b)
+
+
+#object or instance or copy of emp class
+e1 = emp()
+e2 = emp()
+
+#print(e1)
+e1.addEmp()
+e2.addEmp()
+
+
+e1.showEmp()
+e2.showEmp()
+
+
+#print(e2)
+
+#e3 = emp()
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+     
