@@ -1,0 +1,26 @@
+class emp:
+
+    def addemp(s):
+        s.id =input('enter id ')
+        s.name=input('ente name ')
+
+
+    def showdata(d):
+        print(d.id)
+        print(d.name)
+
+
+
+e = emp()
+e2 = emp()
+
+e.addemp()
+e2.addemp()
+
+e2.showdata()
+e.showdata()
+
+
+
+
+
