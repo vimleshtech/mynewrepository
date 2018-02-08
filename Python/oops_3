@@ -1,0 +1,51 @@
+class emp:
+
+    def addemp(s):
+        s.id =input('enter id ')
+        s.name=input('ente name ')
+
+
+    def getId(s):
+            return s.id
+        
+    def showdata(d):
+        print(d.id)
+        print(d.name)
+
+
+emps = [] # list  collection of data
+
+for i in range(0,5):
+    e = emp()
+    e.addemp()
+    emps.append(e)
+
+#print(emps)
+eid = input('enter id to be search :')
+
+for i in range(0,5):
+
+    if emps[i].getId() == eid:
+          emps[i].showdata()  
+    
+
+
+
+
+
+    
+
+
+
+
+
+    
+   
+    
+
+
+
+
+
+
+
