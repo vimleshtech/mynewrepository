@@ -1,0 +1,165 @@
+$ mkdir <proname>
+$ cd  <proname>
+
+$ npm -v
+
+
+$ npm install lite-server -g
+
+or
+$ npm i lite-server -g
+
+
+
+
+
+$lite-server
+
+
+---------- check server on below -------------   
+Local: http://localhost:3000
+    
+
+$npm install  json-server -g
+
+
+--start server
+
+
+$json-server --watch db.json --port 3004
+
+
+
+
+
+$npm install -g typescript
+
+
+$tsc -version 
+
+
+
+
+
+------
+
+tsc one.ts
+
+
+--run
+
+$node one.js
+
+
+ --to generate type configuration file 
+
+
+$tsc -init
+
+
+
+
+
+ 
+
+
+
+********** Command ***************
+
+$npm install -g @angular/cli		
+
+//install cli
+
+
+$ng new project_name			
+
+//create new project
+$cd project_name			
+//call /go to project
+
+
+
+$ng serve		//start application 
+
+
+
+////to open in browser
+
+
+localhost:4200
+
+
+
+
+
+
+
+
+Workflow
+======================
+src
+   -app
+
+
+		->module.ts (3)
+			->app.component.ts
+			->app.component.html
+			->app.component.css
+
+
+   -index.html (1)
+		  <app-root></app-root>
+   -main.ts    (2)
+
+   	
+Angualar Libary 
+--------------------	
+System Defined:
+import { enableProdMode } from '@angular/core';
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { environment } from './environments/environment';
+
+
+User defined:
+---------------------
+
+import { AppModule } from './app/app.module';
+
+
+
+
+Our First Page
+============================
+
+test.component.css
+test.component.html
+test.component.ts
+	import {Component} from '@angular/core'
+
+
+@Component({
+  selector: 'test-app',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.css']
+})
+export class TestComponent {}
+
+
+app.componet.ts
+main.ts 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
