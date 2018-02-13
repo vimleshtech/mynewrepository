@@ -1,0 +1,75 @@
+SQL 
+===================
+Step1:
+	show databases;  -- show list of database
+
+Step2: 
+	create database <dbname>; -- create new database 
+
+Step3:
+	use <dbname>; 	--swith database
+
+Step4:
+	create table <tblname>
+	(
+	id int,
+	name varchar(100),
+	gender varchar(10)
+	);
+
+Step5:
+	show tables;
+
+
+Step6:
+	desc <tblname>;
+
+
+Step7:
+	insert into <tblname>(id,name,gender)
+	values(1,'nitin','male');
+
+
+Step8:
+	select * from <tblname>;  --* : show all columns 
+
+
+	select * from <tblname>
+	where id = 100;
+=====================================
+Junit	: is framework(standard approach to create/develop the project) 
+	: set of rules/properties/function/class 
+	: reusability of source code & easy to manage 
+
+Junit class type:
+	i. Junit TestCase/TestClass
+	ii. Junit Test Suite 
+
+i. Junit TestCase/TestClass
+--------------------------------------------
+Junit Annotation (@AnnotationName):
+	@BeforeClass		: 1	- execute one time 
+	@AfterClass		: 5	- execute one time
+	@Before			: 2	- execute before every @Test function 
+	@After			: 4	- execute after every @Test function 	
+	@Test			: 3	- @Test can be multiple in a class 
+					- priority/execution  of @Test will be 
+in sorter order by A-Z
+	@Ignore			: to skip the test case 
+
+Junit Result/Report:
+	
+
+ii. Junit Test Suite : suite is collection/reference of Junit TestCase classes 
+--------------------------------
+  -Junit can be considered as module 
+
+
+
+
+
+
+
+
+
+
