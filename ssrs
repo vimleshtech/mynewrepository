@@ -1,0 +1,17 @@
+Report Type
+==============
+:Report Wizard 
+
+-Tabular Report
+-Matrix Report
+-Sub Report   : parent and child (multiple repor in sheet)
+-Parametrize Report  : (textfied, dropdown..)
+-Navigation Report   : action reprot or dependet report
+-Chart Report        : graphical report 
+
+-Adhoc Report***     : 
+			wizard reprot 		
+
+
+
+-Deploye
