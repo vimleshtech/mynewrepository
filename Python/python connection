@@ -1,0 +1,36 @@
+# server name: 127.0.0.1/localhost
+# user id: root
+# password: root
+# database name :testdb
+
+import mysql.connector as cc
+con = cc.connect(host='localhost',database='testdb',user='root',password='root')
+
+# prepare a cursor object using cursor() method
+cur= con.cursor()
+
+sid = input('enter id to be search :')
+
+cur.execute("select * from emp where id = "+str(sid))
+# Fetch all the rows in a list of lists.
+results = cur.fetchall()
+
+for row in results:
+    print row[0],row[1]    
+
+con.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
