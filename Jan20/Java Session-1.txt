@@ -1,0 +1,84 @@
+Java Environment
+===============================
+JDK	: java development kit 
+	: Version: 1.9, 1.8*, 1.7, 1.6 ....
+	: to check java installation 
+	: java -version 
+
+Eclipse : Editor (IDE - integrated development environment)
+	: Oxygen, Neon, Mars, Luna, Juno ...
+ 
+
+Component of JDK
+===================
+-Javac: java compiler which convert source code.java to bytecode.class
+-JVM(JIT): java virtual machine which allocate the memory
+		, deallocation of memory, grabage collector
+	: just in time which is interpreter 
+           -to convert byte code.class to machine/native code 
+-JRE	: java runtime environment/Library 
+
+Edition 
+=============
+-J2SE**
+-J2EE
+-J2ME/Android
+
+Project Type
+====================
+-java project ****
+-web
+-web service
+-cloud
+-Entrprise 
+etc.
+
+
+Project's Structure
+=================
+Project_1
+	-src : source code 
+	  -package1 : is collection of classes or aknown as module
+		-class1.java
+		-class2.java
+			....
+	  -package2  
+	  -package3
+	-jre : library 
+	..
+	...
+
+Identifier and keywords/reserved words
+=======================================
+package  : reference of current folder/module 
+public	 : access specifier /scope / global access 
+class	 : is wrapper of data member and function
+void	 : is return type / no return 
+static	 : signle memory allocation, 
+		can be access without object 
+main	 : reserved function /entry point 
+int	 : data type for int/number
+String	 : data type for alpha numeric
+if	 : conditional satement 	
+else
+while
+etc.
+
+
+Syntax : rules and regulation 
+=======================
+//	- single line comment
+/* */	- mulitple line comment
+;	- termination statment 
+[]	- array : collection of similar data type
+{}	- body of class, function , condition , loop , try catch etc.
+()	- function , condition, loop 
+
+
+Note : java is case sensetive 
+
+
+
+
+
+
