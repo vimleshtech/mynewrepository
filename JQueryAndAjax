@@ -1,0 +1,108 @@
+<html>
+<head>
+</head>
+<body>
+
+    <div>
+         <!--
+             Action :
+                    ""          : same page
+                    "register"  : route to regiser class/function 
+
+            Method:            
+             Get : http://localhost:8080/register?fname=nitin&lname=sinha 
+             Post : http://localhost:8080/register
+
+
+             Button Type:
+                        submit  : to post /call to server side code 
+                        button : doesn't call to server side code 
+
+         -->
+
+        
+        <form action="/register" method="get">
+                <p>
+
+                    First Name : <input type="text"  name="fname" id="fname"/>
+                </p>
+                <p>
+                    
+                        Last Name : <input type="text" name="lname" id="lname"/>
+                </p>
+                <p>
+                        DOB : <input type="date" name="dob" />
+
+
+                </p>
+                <p>
+
+                    <input type="submit" value="Register" />
+
+    
+
+                </p>
+                    
+
+        </form>
+
+
+    </div>
+
+
+    <button id="bt"> Test </button>
+
+    <p id="msg" >
+        shksj gsjhgs jsgs shs g
+    </p>
+
+    <input type="hidden" id="hdn" value="1" />
+
+
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+    
+<script>
+
+function myMap() {
+            var mapProp= {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+            };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+myMap();
+
+    //var pid = document.getElementById('msg');
+    var pid = $("#msg");
+    
+    $("#bt").on("click", function( event ) {
+        
+                    if($("#hdn").val()=="1" )        
+                    {
+                            pid.hide();
+                            $("#hdn").val("0");
+                    }
+                    else 
+                    {
+                            pid.show();
+                            $("#hdn").val("1");
+                            
+                    }
+                    
+        }       
+
+        );
+
+
+
+
+</script>    	
+
+
+</body>
+</html>
