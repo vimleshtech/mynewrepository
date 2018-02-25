@@ -1,0 +1,182 @@
+
+### vector 
+### list 
+### data frame 
+#### cbind 
+#### function 
+
+
+
+### vector 
+
+s <- c(1:100)
+data <- c(333,3222,2,3222,2322,3)
+
+sum(data)
+max(data)
+min(data)
+mean(data)
+
+### list  /array 
+# Create two vectors of different lengths.
+vector1 <- c(5,9,3) #vector 
+vector2 <- c(10,11,12,13,14,15) #vector 
+
+# Take these vectors as input to the array.
+result <- array(c(vector1,vector2),dim = c(3,3,2))
+
+print(result)
+
+
+
+vector1 <- c(5,9,3)
+vector3 <- c(5,9,3)
+vector1*vector3
+
+vector2 <- c(10,11,12,13,14,15)
+column.names <- c("COL1","COL2","COL3")
+row.names <- c("ROW1","ROW2","ROW3")
+matrix.names <- c("Matrix1","Matrix2")
+
+# Take these vectors as input to the array.
+result <- array(c(vector1,vector2),dim = c(3,3,2),dimnames = list(row.names,column.names,matrix.names))
+
+print(result)
+
+
+
+
+##data frame 
+df = data.frame(vector1,vector3)
+
+
+emp.data <- data.frame(  emp_id = c (1:5), emp_name = c("Rick","Dan","Michelle","Ryan","Gary"),
+  salary = c(623.3,515.2,611.0,729.0,843.25), 
+  
+  start_date = as.Date(c("2012-01-01", "2013-09-23", "2014-11-15", "2014-05-11",
+                         "2015-03-27")),
+  stringsAsFactors = FALSE
+)
+# Print the data frame.		
+
+####### factor 
+# Create a vector as input.
+data <- c("East","West","East","North","North","East","West","West","West","East","North")
+
+print(data)
+print(is.factor(data))
+
+# Apply the factor function.
+factor_data <- factor(data)
+
+print(factor_data)
+print(is.factor(factor_data))
+
+### matrix
+
+M <- matrix(c(3:14), nrow = 4, byrow = TRUE)
+
+v <- c(1:9)
+matrix(v,nrow=3,ncol=3)
+
+
+########### #### function  : is set of instructions/command which is reusable 
+### types :   i. system defined / inbuilt  ii. user defined
+
+#ii. user defined
+
+add <- function(a,b){
+  
+  c =a+b
+  print(c)
+  
+  
+}
+
+
+sub <- function(a,b){
+  
+  c =a+b
+  return(c)
+  
+}
+
+
+### write a program to convert digit to word
+# 123 = one hundred twenty three
+
+
+fn ="aa"
+ln ="dd"
+
+f = paste(fn,ln)
+
+-----------------------------------------------------
+
+abc=function(num){
+  
+  as.character(num)
+  l=length(num)
+  
+  if(l=1){
+    
+    ones<-switch(x,'1'='one','2'='two','3'='three','4'='four''5'='five','6'='six','7'='seven','8'='eight','9'='nine')
+  }else if(l=2){
+    
+    x=num%%10
+    y=num/10
+    
+    if(y=1){
+      
+    switch(x,'1'='eleven','2'='twelve','3'='thirteen','4'='forteen'='fifteen','6'='sixteen','7'='seventeen','8'='eighteen','9'='ninteen')
+    }else{
+      
+      ones<-switch(x,'1'='one','2'='two','3'='three','4'='four''5'='five','6'='six','7'='seven','8'='eight','9'='nine')
+      tens<-switch(y,'2'='twenty','3'='thirty','4'='forty''5'='fifty','6'='sixty','7'='seventy','8'='eighty','9'='ninty')
+    
+      name=paste(tens,ones)}
+  }
+  }
+
+
+
+v1 <- c("one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thriteen","fourteen","fifteen","sixteen",
+        "seventeen","eighteen","ninteen")
+v2 <-c("","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninty")
+
+
+n = 213
+if(n<20){
+  print(v1[n])
+
+  }else if(n<100){
+  
+    n1 = n/10
+    n2 = n %% 10
+    
+    print( paste(v2[n1], v1[n2] ))
+    
+  }else if(n<1000){
+  
+    n1 = n/100  #1  23 
+    n2 = n %% 100 #23
+    
+    if(n2<20){
+        print( paste(v1[n1], "hundred", v1[n2] ))
+    }else {
+      
+      n3 = n2 / 10
+      n4 = n2 %% 10
+      print( paste(v1[n1], "hundred",v2[n3], v1[n4] ))
+      
+    }
+    
+}
+
+
+
+
+
+
+
+
