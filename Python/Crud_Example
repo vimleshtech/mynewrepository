@@ -1,0 +1,58 @@
+class emp:
+    def __init__(s):
+        s.id =0
+        s.name=''
+        s.address= ''
+
+    def inp(s):
+        
+        s.id  = input('enter data : ')
+        s.name  = input('enter data : ')
+        s.address  = input('enter data : ')
+
+    def disp(s):
+        
+        print(s.id)
+        print(s.name)
+        print(s.address)
+
+    def getId(s):
+        return s.id
+
+
+eo = []
+s =  int(input('enter size of array  '))
+
+
+for i in range (0,s):
+    o = emp()
+    o.inp()
+    eo.append(o)
+
+sid = input('enter id to search :')
+for i in eo:
+    if i.getId() == sid:
+        i.disp()
+        
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+        
+    
