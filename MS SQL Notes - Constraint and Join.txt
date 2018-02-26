@@ -1,0 +1,62 @@
+instance
+	: LH7U05CG7300QJQ\DBS92
+database file system
+	.mdf : main database 
+	.ldf : log database
+
+	.ndf : file group 
+=====================================
+constraint: is property of column (rules over column)
+ There are following types of constraints:
+-primary key	:	
+		-no duplicate
+		-not null
+		-physically sorted
+		-can be single on a table 
+-foreign key  : is referential column from one table another table
+		-can allowed referenctial value only
+		-can be duplicate
+		-can be null
+		
+-not null 	: madatory column
+-null		: optional column
+-unique		: 
+		-single null
+		-no duplicate
+		-may or may not sorted
+		-can be multiple on a table 
+
+-default	: assign value by defaut when data will not pass by user	
+-check 		: allow from given list 	 ('m','f')
+		
+-----------------------------
+create table customer 
+(
+cid int primary key,
+fname varchar(100) not null,
+lanme varchar(30)  null,
+emailid  varchar(30) unique,
+gender   varchar(30)    check  (gender in('m','f')),
+create_date  datetime	default getdate(),
+status		char(1)  default 'a'
+)
+
+
+insert into customer (cid,fname)
+values()
+create tabel sales_order
+(
+oid  int pirmary key,
+cid  int foreign key referece customer(cid),
+product varchar(100) not null,
+quantity int not null,
+totalprice     int
+)
+
+
+
+join: to merge two or more than two tables...
+===========================================
+
+
+
