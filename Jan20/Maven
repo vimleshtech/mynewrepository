@@ -1,0 +1,21 @@
+Hybrid Framework: it's combination of data driven and key driven 
+
+	-POM: page object model 
+	-key driven
+
+Mavean : 
+		is build and configuration framework 
+			-pom.xml (configuration)
+				: library dependency 
+			-maven clean
+			-maven build
+				goal :  compile, install etc.
+
+
+
+
+***
+Grid
+Selenium IDE 
+
+
