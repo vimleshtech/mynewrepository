@@ -1,0 +1,29 @@
+
+
+		String s ="this is java";
+		
+		//char count
+		int l =   s.replace(" ", "").length();
+		System.out.println(l);
+		
+		//particular char count
+		int cc=0;
+		for(int i=0; i<s.length();i++)
+		{
+			if( (s.charAt(i)+"").equals("s") )
+				cc++;
+		}
+		System.out.println(cc);
+		
+		//proper case 
+		String w[] = s.split(" "); //["this","is","java"]
+		for(String sw: w)
+		{
+			System.out.print(
+					sw.substring(0, 1).toUpperCase()+ 
+					sw.substring(1, sw.length()).toLowerCase()+" "
+			);
+			
+			
+			
+		}
