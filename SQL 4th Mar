@@ -1,0 +1,239 @@
+-- physically sorted
+/*
+data type		** 
+---------------------------
+contraint
+ddl
+dml
+dql			
+tcl 
+		-begrin transaction 
+		-commit
+		-rollback
+where
+operator
+order by
+group by
+case when 
+keywords:
+		top
+		distinct
+		into 
+		nolock 
+		identity
+function ****
+join 
+
+index
+subquery  **
+view 
+procedure
+funciton (udf)
+
+
+*/
+
+use hrms 
+
+select * from city 
+
+begin tran   --- start recording 
+	
+		 begin tran 
+
+		delete from city 
+
+		select * from city 
+
+rollback 
+--or 
+commit 
+
+------
+--top : return given no. of rows
+
+select top 2 * from city 
+
+select top 2 * from city 
+order by city desc 
+		
+		
+-- distinct: return unique rows 
+select distinct * from city 
+
+select distinct city from city 
+
+--into  : make a new copy of existing table
+select * into new_table from city 
+
+select city into city_cp from city 
+
+select * into city_cp2 from city 
+where city like '%a%'
+
+select * from new_table
+
+--		identity : auto generate column 
+create table sales
+(
+order_id int identity(10,2),
+custname varchar(100)
+)
+
+insert into sales
+values('jatin')
+
+select * from sales 
+
+select * from city 
+
+---noolock  : dirty read 
+
+select * from city(nolock)
+
+delete from city 
+-
+begin tran 
+
+		update city 
+		set city ='test'
+		where name ='ram'
+
+
+rollback 
+
+
+--function ****
+--aggregiate funciton 
+--max
+--min
+--count
+--avg
+--sum
+
+----string function 
+--left()
+--right()
+--upper()
+--lower()
+--len()
+--replace()
+--charindex()
+--SUBSTRING()
+--ltrim()
+--rtrim()
+--etc.
+
+
+select CHARINDEX('-','raman-kumar')
+
+select left('raman-kumar', CHARINDEX('-','raman-kumar'))
+
+
+select left(name, CHARINDEX('-',name)) from tablename 
+
+
+select SUBSTRING('raman sinha',1,3)
+
+select ltrim('   raman sinha')
+
+
+----maths function 
+--pow()
+--sqrt()
+--mean()
+--stdev()
+--sqrt()
+--sqrt()
+--pi()
+
+select pi()
+
+
+
+---misli...
+--isnull()
+--convert()
+--cast() 
+
+select isnull(null,'abcd') 
+select isnull(null,'') 
+
+select 1+'a' --incorrect
+
+select convert(varchar, 1)+'a' --incorrect
+
+
+select cast( 1 as varchar)+'a' --incorrect
+
+
+--- date 
+select getdate()
+select datepart(yyyy, getdate())
+
+select datepart(MONTH, getdate())
+
+select datepart(DAY, getdate())
+
+select datepart(DAYOFYEAR, getdate())
+select datepart(QUARTER, getdate())
+select datepart(WEEKDAY, getdate())
+
+select getdate()
+--FORMAT RANGE : 101 TO 113
+select  convert(varchar,getdate(),101)
+select  convert(varchar,getdate(),111)
+
+----self join 
+
+create table emp_1
+(
+eid int,
+name varchar(100),
+mid int
+)
+
+
+
+insert into emp_1
+values(1,'nitin',null),
+(2,'jatin',1),
+(3,'ayush',1),
+(4,'raman',null),
+(5,'chahat',4)
+
+select * from emp_1
+--eid ename mgrid mgrname 
+
+select e.eid,e.name, e.mid , m.name as mgrname
+from emp_1 e left join emp_1 m 
+	on e.mid = m.eid
+
+
+select e.eid,e.name, e.mid , m.name as mgrname
+from emp_1 e inner join emp_1 m 
+	on e.mid = m.eid
+
+---
+emp :
+eid name  
+----------------
+1  a
+2  b
+3  c
+
+
+
+
+select * from emp_copy
+
+.xlsx
+-------
+eid  name 
+1    ff
+3    ddd
+
+
+
+
+
