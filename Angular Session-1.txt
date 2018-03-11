@@ -1,0 +1,137 @@
+Environment setup
+=================
+Structure of Angular Application
+=================
+Components
+==================
+Type Script
+==================
+Properties
+==================
+Data Binding 
+===================
+
+
+Environment setup
+==================
+-Node.JS (NPM -node package manager)
+		https://nodejs.org/en/download/
+-Editor:
+	-VisualStudio Code 
+	-Sublime Text
+	-Anoconda
+	-DreamViewer
+	etc.
+
+	https://code.visualstudio.com/download
+
+-@angular/cli		
+
+
+**
+new open terminal 
+		-> view menu -> integrated terminal 
+
+**
+mkdir  project1	
+cd project1
+
+ng new sample-pro
+
+
+Structure of Angular Application
+=================
+sample-pro
+	node_modules
+	src
+	  app	
+		app.component.html
+		app.component.css
+		app.component.ts	:		4.	
+		app.component.spec.ts
+		app.module.ts		:		3.	
+			
+          assests
+        cli.json
+	index.html			: landing page  1.
+	style.css			
+	main.ts				: 		2.
+	db.json
+	etc.
+	
+
+*ts : type script (top of java script)
+*css : cascading style sheet
+*html : hypertext makup language
+*json : javaScript object noation 
+*cli : command line interface 
+*spec : for unit testing 
+
+Components:every divsion/section on web page is considered as compoent
+==================
+ for example:
+	header(comp1)
+			header.component.html
+			header.component.css
+				header.component.spec.ts(optionl)
+			header.component.ts
+	menu(comp2)
+			menu.component.html
+			menu.component.css			
+			menu.component.ts
+	body(comp3)
+			body.component.html
+			body.component.css			
+			body.component.ts
+	footer(comp4)
+			footer.component.html
+			footer.component.css
+			footer.component.ts	
+
+
+*** Selector: is cotainder of html and css 
+		<app-root></app-root>
+		
+
+**to start/run the angular application 
+	ng serve --open
+	
+
+	localhost:4200
+
+
+
+**edit HTML page or create own template 
+	app.component.html
+	
+		
+
+Type Script : 
+==================
+
+import { Component } from '@angular/core';
+
+import 		: keyword
+Component  	: name of class
+@angular/core 	: library or directive
+
+
+templateURLs : html
+styleURLS    : css
+
+
+
+variable
+constructor 
+
+Properties : binding 
+==================
+expression : {{}}
+
+
+
+Add new component
+===========================
+ng g c header
+ng generate component header
+
