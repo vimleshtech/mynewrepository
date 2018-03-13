@@ -1,0 +1,465 @@
+General Order Management
+Reviewing Document Flow	VA03
+Sales Order Processing
+Creating Sales Order	VA01
+  Maintaining a Sales Order	VA02
+Displaying a Sales Order	VA03
+Releasing an Order or Delivery from Credit Hold: Non-Flooring	VKM1
+Display List of RMAs by Customer	VA05 / VA05N
+Confirm RMA Goods Receipt	VL02
+Generate list of open return orders for deletion	VA05 / VA05N
+Display Customer returns eligibility	MCSI
+Removing a Billing Block (Approving Credit/Debit Requests)	V.23
+Pricing Master Data
+Create Pricing	VK11
+Creating a Sales Deal	VB21
+Maintaining a Sales Deal	VB22
+Displaying a Sales Deal	VB23
+Maintaining Prices Naster	VK12
+Displaying Prices Master	VK13
+Material Master Data
+Creating Material Substitution Master Data	VB11
+Maintaining/Deleting Material Substitution Master Data	VB12
+Displaying Material Substitution Master Data	VB13
+Creating a Bundled Master	MM01
+Creating a Sales BOM	CS01
+Maintaining a Sales BOM	CS02
+Displaying a Sales BOM	CS03
+Customer Master Data
+Creating Partner Records	XD01
+Maintaining Customer Master Data	XD02
+Displaying Customer Master Data	XD03
+Deactivating a Partner	VD06
+Customer Credit Info
+Creating/Maintaining New Customer Credit Information	FD32
+Displaying Customer Credit Information	FD33
+Blocking or Unblocking a Customer	VD05
+Shipping
+Creating a Delivery	VL01N
+Displaying a Delivery	VL03N
+Deleting a Delivery	VL02
+Shipment Inquiry / Display	VT03N
+Adjusting Transfer Order - Confirmation Quantity	LT12
+Collectively Confirm Transfer Order	LT25
+Batch Shipment Confirmation	VL19
+Reprinting an Delivery or viewing print preview	VL71
+Creating Service Provider/Carrier Master Data	XK01
+Maintaining Serive Provider/Carrier Master Data	XK02
+Displaying Service Provider/Carrier Master Data	XK03
+Maintaining Product Master/Serial # Profile/Unit of Measure/Shipping Unit	MM02
+IDoc Inquiry	WE02 / WE05
+Billing
+Invoicing a Customer Shipment	VF01
+Reprinting an Invoice	VF31
+Releasing a Sales Order for Billing	V.23
+Creating an Invoice by Using the Billing Due List	VF04
+Checking Open Billing Documents	VF05
+Create Credit/Debit Memo	FB01
+A/R - Accounts Receivable Procedures
+Controlling Total Debit/Credit bkgs	F.03
+Generate FI Account balance	F.08
+Generate Month-to-date Inv. register	F.02
+Process payments	FBZ1
+Rqst Individual  Customer Corresp.	FB12
+Generate Customer Correspondence	F.61
+Enter Batch totals under Control ttl	FB07
+Display G/L Acct. totals	FBL3N
+Reverse Posted Amounts	FB08
+Customer Refunds	FBL6N
+Customer Refund to other than Payer	FB05
+Clearing Debit/Credit on Cust. acct.	FB1D
+Customer Balance in Local Currency	F.23
+G/L Account Balance Report	F.08
+Create Invoice - legal entity adjust	FB01
+Generate Cust. Acct. statements	F.27
+Generate Dunning Letters	F150
+Generate Billing Due List	VF04
+Generate Blocked Billing Doc list	VFX3
+Inq. via Credit Release Screen	VKM1
+List orders by partner	VA05 / VA05N
+Past Due invoices by customer	FD11
+Check number info by G/L account	FBL3N
+Display customer Line items	FBL5N
+Treasury - Cash Application
+Post Customer payments	FF68
+Verify if A/R is updated	FB03
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sales tcodes SD-SLS
+VA01 - Create Sales Order
+VA02 - Change Sales Order
+VA03 - Display Sales Order
+VOV8 - Document Type Maintenance
+VA05 - List of Sales Orders
+VOV7 - Maintain Item Categories
+VA21 - Create Quotation
+VA41 - Create Contract
+V_V2 - Updating Sales Documents by Material
+VA00 - Initial Sales Menu
+VOV4 - Table TVEPZ Assign Sched.Line Cat.
+VA11 - Create Inquiry
+VA22 - Change Quotation
+VOV6 - Maintain Schedule Line Categories
+VF05 - List Billing Documents
+..... - ..................................
+Full list of SAP SD Sales tcodes SD-SLS
+
+
+Billing tcodes SD-BIL
+VF01 - Create Billing Document
+VF02 - Change Billing Document
+VF04 - Maintain Billing Due List
+VF03 - Display Billing Document
+VTFL - Delivery to bill copying control
+VF11 - Cancel Billing Document
+VTFA - Order to bill copying control
+VFX3 - List Blocked Billing Documents
+VTAA - Order to order copying control
+VTLA - Order to delivery copying control
+VTAF - Bill. doc. to order copying control
+VF06 - Batch billing
+VF21 - Create Invoice List
+VF44 - Revenue Recognition: Worklist
+VTFF - Bill to bill copying control
+..... - ..................................
+Full list of SAP SD Billing tcodes SD-BIL
+
+Basic Functions tcodes SD-BF
+NACE - WFMC: Initial Customizing Screen
+VBKD - Bonus Buy: Condition Types
+VOFM - Configuration for Reqs, Formulae
+VARA - Archiving
+OVA8 - Automatic Credit Checks
+VKM3 - Sales Documents
+CO09 - Availability Overview
+VKM1 - Blocked SD Documents
+VORA - Archiving Control for Sales Doc.
+VF31 - Output from Billing Documents
+OVZ9 - SD Cust. Control Availability Check
+VKM4 - SD Documents
+CO06 - Backorder Processing
+VV31 - Create Output : Billing
+VOTXN - Maintain Text Customizing
+..... - ..................................
+Full list of SAP SD Basic Functions tcodes SD-BF
+
+Information System tcodes SD-IS
+MCTA - SIS: Customer Analysis - Selection
+MCTC - SIS: Material Analysis - Selection
+MCTI - SIS: Sales Empl. Analysis Selection
+MCTE - SIS: Sales Org. Analysis - Selection
+MCV9 - Call Up List of Incomplete Documents
+MCTG - SIS: Sales Office Analysis Selection
+MCTK - SIS: Shipping Pt. Analysis Selection
+MCSC - SIS: Display Evaluation
+MCV5 - Call Up Price List w.Stepped Display
+MCVCHECK01 - SIS: Update Group Check
+MCSA - SIS: Create Evaluation
+MCVCHECK02 - SIS: Header STAFO Check
+MCVCHECK03 - SIS: Item STAFO Check
+MCTV03 - SIS: Address List - Selection
+MCV6 - Call Up Indiv. Customer Prices List
+..... - ..................................
+Full list of SAP SD Information System tcodes SD-IS
+
+SD General tcodes
+VA01 - Create Sales Order
+VA02 - Change Sales Order
+VF01 - Create Billing Document
+NACE - WFMC: Initial Customizing Screen
+VK11 - Create Condition
+VBKD - Bonus Buy: Condition Types
+VF02 - Change Billing Document
+VOFM - Configuration for Reqs, Formulae
+VA03 - Display Sales Order
+VF04 - Maintain Billing Due List
+VKOA - Accnt Determination
+VOV8 - Document Type Maintenance
+VA05 - List of Sales Orders
+VF03 - Display Billing Document
+VTFL - Delivery to bill copying control
+..... - ..................................
+Full list of SAP SD General tcodes
+
+POS Interface tcodes SD-POS
+WPMA - POS Download: Manual Request
+WPER - POS interface monitor
+WPUK - POS simulation
+WPMU - POS download: change message
+WLB1 - Investment Buying Reqrmnt Determntn
+WVFB - Inbound store order processing
+WLB3 - Autom. opt. PO-based load building
+WPMI - POS download: initialization
+WVFI - Simulation: Store Physical Inventory
+WPER2 - POS: Analysis/Auxiliary Reports
+WPUW - Goods movements simulation
+WPED - Sales Audit Editor
+WDLS - Delete Error Messages
+WLB2 - Investment buying analysis
+WVFD - Process phys. inventory doc. further
+..... - ..................................
+Full list of SAP SD POS Interface tcodes SD-POS
+
+Electronic Data Interchange tcodes SD-EDI
+VOE4 - SD EDI Conversion
+VOE2 - SD EDI Customer/Vendor
+VPRICAT - Maintain and Create Price Catalog
+SMME - Output control Message Block Table
+VOE1 - Maintain EDPST
+VPRE - PRICAT manual creation
+VOE3 - SD EDI Partner Functions
+W_PRICAT_MAINTAIN - Maintain Price Catalog
+WPRI - PRICAT on the Internet
+WPRI6 - Templ.for Non-R/3 Fields at CatItem
+WPRI7 - Templ. for Non-R/3 Fields at QtyItem
+W_PRICAT_ASSIGN_002 - Assignment ILN Mat.Gr. SAP Mat. Gr.
+W_PRICAT_ASSIGN_003 - Assignment SAP Mat. Gr. - Purch.Gr.
+W_PRICAT_ASSIGN_001 - Assignment ILN Vendor Pur. Group
+PRICATLOGOUT - PRICAT: Display Application Log
+..... - ..................................
+Full list of SAP SD Electronic Data Interchange tcodes SD-EDI
+
+Sales Support tcodes SD-CAS
+VC/2 - Customer Master Data Sheet
+VC01N - Edit Sales Activity
+VC01 - Create Sales Activity
+VC/1 - List of Customers
+OVBR - Assignment to Item Category
+OVBS - Rule Table for Determining Dates
+VC00 - Sales Support
+OV3Z - Determine Prod. Allocation Hierarchy
+OV1Z - Define Product Allocation Procedure
+OV4Z - Product Allocation Control
+VC05 - Sales support monitor
+VC02 - Change Sales Activity
+OV7Z - Create Characteristics for Rem.Alloc
+VC03 - Display Sales Activity
+OV2Z - Define Product Allocation Object
+..... - ..................................
+Full list of SAP SD Sales Support tcodes SD-CAS
+
+Foreign Trade tcodes SD-FT
+VEIW - Create file INTRA/EXTRA/KOBRA
+UPDA - Foreign Trade: Mater data transfer
+LEER - Create long-term VenDecl. (customer)
+VPM4 - Merge: Japan - Import Code Number
+VX11N - Create financial document
+VINK - Import Processing: Quota Number
+VEFU - Foreign Trade: Add INTRASTAT Data
+VE01 - INTRASTAT: Selection Dispatch to EU
+LEMA - Dun long-term vendor decl. (vendor)
+VI49 - Foreign Trade Data Control in Doc.
+ENGR - Periodic Declarations
+VI29 - Incompletion - Foreign Trade Data
+VX22 - Change license data (old)
+ARKO - KOBRA: Archiving
+VX13N - Display financial document
+..... - ..................................
+Full list of SAP SD Foreign Trade tcodes SD-FT
+
+Master Data tcodes SD-MD
+VK11 - Create Condition
+VKOA - Accnt Determination
+V/06 - Condition Categories: SD Pricing
+VK12 - Change Condition
+V/08 - Conditions: Procedure for A V
+OVKK - C RV Table T683V "ProcedrDeterminatn
+VOFA - Billing Doc: Document Type
+VK13 - Display Condition
+VBOF - Rebate: Update Billing Documents
+VOR2 - Joint Master Data: Division
+VBN1 - Free goods - Create (SD)
+V/LD - Execute pricing report
+VBO2 - Change Rebate Agreement
+V/07 - Maintain Access (Sales Price)
+VOR1 - Joint Master Data: Distr. Channel
+..... - ..................................
+Full list of SAP SD Master Data tcodes SD-MD
+
+Visit Control tcodes LE-DSD-VC
+/DSD/VC_VP_CREATE - Create Sales Call Schedules
+
+1. VS00 - Master data
+2. VC00 - Sales Support
+3. VA00 - Sales
+4. VL00 - Shipping
+5. VT00 - Transportation
+6. VF00 - Billing
+Others as follows:
+At Configuration:
+1. VOV8 - Define Sales documents type (header)
+2. OVAZ - Assigning Sales area to sales documents type
+3. OVAU - Order reasons
+4. VOV4 - Assign Item categoreies(Item cat determination)
+5. VOV6 - Scedule line categories
+6. OVAL - To assign blocks to relevant sales documents type
+7. OVLK - Define delivery types
+8. V/06 - Pricing
+9. V/08 - Maintain pricing procedure
+10.OVKP - Pricing proc determination
+11.V/07 - Access sequence
+Enduser:
+1. Customer Master Creation-VD01 and XD01 (for full inclu company code)
+VD02 - Change Customer
+VD03 - Display Customer
+VD04 - Customer Account Changes
+VD06 - Flag for Deletion Customer
+XD01 - Create Customer
+XD02 - Modify Customer
+XD03 - Display Customer
+2. Create Other material -
+-
+________________________________________
+MM00
+3. VB11- To create material determination condition record
+4. CO09- Material availability Overview
+5. VL01 - Create outbound delivery with ref sales order
+6. VL04 - Collective processing of delivery
+7. VA11 - Create Inquiry
+VA12 - Change Inquiry
+VA13 - Display Inquiry
+Sales & Distribution
+Sales order / Quote / Sched Agreement / Contract
+· VA01 - Create Order
+· VA02 - Change Order
+· VA03 - Display Order
+· VA02 - Sales order change
+· VA05 - List of sales orders
+· VA32 - Scheduling agreement change
+· VA42 - Contract change
+· VA21 - Create Quotation
+· VA22 - Change Quotation
+· VA23 - Display Quotation
+Billing
+· VF02 - Change billing document
+· VF11 - Cancel Billing document
+· VF04 - Billing due list
+· FBL5N - Display Customer invoices by line
+· FBL1N - Display Vendor invoices by line
+Delivery
+· VL02N - Change delivery document
+· VL04 - Delivery due list
+· VKM5 - List of deliveries
+· VL06G - List of outbound deliveries for goods issue
+· VL06P - List of outbound deliveries for picking
+· VL09 - Cancel goods issue
+· VT02N - Change shipment
+· VT70 - Output for shipments
+General
+· VKM3, VKM4 - List of sales documents
+· VKM1 - List of blocked SD documents
+· VD52 - Material Determination
+MM Transaction Code
+All transaction are stored in table TSTC.
+Transaction for MM module start with M.
+IH09 - Display Material
+MM01 - Create Material
+MM02 - Change Material
+MM03 - Display Material
+MM50 - List Extendable Materials
+MMBE - Stock Overview
+MMI1 - Create Operating Supplies
+MMN1 - Create Non-Stock Material
+MMS1 - Create Service
+MMU1 - Create Non-Valuated Material
+ME51N - Create Purchase Requisition
+ME52N - Change Purchase Requisition
+ME53N - Display Purchase Requisition
+ME5A - Purchase Requisitions: List Display
+ME5J - Purchase Requisitions for Project
+ME5K - Requisitions by Account Assignment
+MELB - Purch. Transactions by Tracking No.
+ME56 - Assign Source to Purch. Requisition
+ME57 - Assign and Process Requisitions
+ME58 - Ordering: Assigned Requisitions
+ME59 - Automatic Generation of POs
+ME54 - Release Purchase Requisition
+ME55 - Collective Release of Purchase Reqs.
+ME5F - Release Reminder: Purch. Requisition
+MB21 - Create Reservation
+MB22 - Change Reservation
+MB23 - Display Reservation
+MB24 - Reservations by Material
+MB25 - Reservations by Account Assignment
+MB1C - Other Goods Receipts
+MB90 - Output Processing for Mat. Documents
+MB21 - Create Reservation
+MB22 - Change Reservation
+MB23 - Display Reservation
+MB24 - Reservations by Material
+MB25 - Reservations by Account Assignment
+MBRL - Return Delivery per Mat. Document
+MB1C - Other Goods Receipts
+MB90 - Output Processing for Mat. Documents
+MB1B - Transfer Posting
+MIBC - ABC Analysis for Cycle Counting
+MI01 - Create Physical Inventory Document
+MI02 - Change Physical Inventory Document
+MI03 - Display Physical Inventory Document
+MI31 - Batch Input: Create Phys. Inv. Doc.
+MI32 - Batch Input: Block Material
+MI33 - Batch Input: Freeze Book Inv.Balance
+MICN - Btch Inpt:Ph.Inv.Docs.for Cycle Ctng
+MIK1 - Batch Input: Ph.Inv.Doc.Vendor Cons.
+MIQ1 - Batch Input: PhInvDoc. Project Stock
+MI01 - Create Physical Inventory Document
+MI02 - Change Physical Inventory Document
+MI03 - Display Physical Inventory Document
+MI31 - Batch Input: Create Phys. Inv. Doc.
+MI32 - Batch Input: Block Material
+MI33 - Batch Input: Freeze Book Inv.Balance
+MICN - Btch Inpt:Ph.Inv.Docs.for Cycle Ctng
+MIK1 - Batch Input: Ph.Inv.Doc.Vendor Cons.
+MIQ1 - Batch Input: PhInvDoc. Project Stock
+MI01 - Create Physical Inventory Document
+MI02 - Change Physical Inventory Document
+MI03 - Display Physical Inventory Document
+MI31 - Batch Input: Create Phys. Inv. Doc.
+MI32 - Batch Input: Block Material
+MI33 - Batch Input: Freeze Book Inv.Balance
+MICN - Btch Inpt:Ph.Inv.Docs.for Cycle Ctng
+MIK1 - Batch Input: Ph.Inv.Doc.Vendor Cons.
+MIQ1 - Batch Input: PhInvDoc. Project Stock
+MI21 - Print physical inventory document
+MI04 - Enter Inventory Count with Document
+MI05 - Change Inventory Count
+MI06 - Display Inventory Count
+MI09 - Enter Inventory Count w/o Document
+MI34 - Batch Input: Enter Count
+MI35 - Batch Input: Post Zero Stock Balance
+MI38 - Batch Input: Count and Differences
+MI39 - Batch Input: Document and Count
+MI40 - Batch Input: Doc., Count and Diff.
+MI08 - Create List of Differences with Doc.
+MI10 - Create List of Differences w/o Doc.
+MI20 - Print List of Differences
+MI11 - Physical Inventory Document Recount
+MI07 - Process List of Differences
+MI37 - Batch Input: Post Differences
+CT01 - Create Characteristic
+CT02 - Change Characteristic
+CT03 - Display Characteristic
+CL01 - Create Class
+CL02 - Classes
+CL03 - Display Class
+CL04 - Delete Class
+CL2B - Class Types
+
