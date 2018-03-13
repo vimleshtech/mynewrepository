@@ -1,0 +1,47 @@
+Sales Life Cycle 		
+=====================
+-Inquiry 		** optional 
+	 - inq is presales activities
+	 *header details
+		-inq. type
+		-customer (sold to party)
+		-bill to party
+		-date
+	 *details records 
+		-item no.
+		-product/material
+		-qunatity
+		-unit
+		etc.
+	
+-Quotation 		** optional 
+	*price
+	*time line 
+	*payment options ..
+	
+-Contract 		** optional 
+	*documentation between buyer and saler
+	*contract time line 
+
+-Sales Order (SO)	** Mandatory 			
+	 -Purchase Order (PO) - MM ** Mandatory
+
+	*inq.
+	*customer/sold to party
+		/bill to party
+	*item details
+	  quantity
+	  unit
+	  date 
+	  etc.		
+
+-Receipt 
+-Invoice 
+-Billing 
+	-Price Control
+	-Inventory Management 
+
+
+-Report 
+
+ 
