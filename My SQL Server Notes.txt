@@ -1,0 +1,233 @@
+MS SQL Server Practice Questions.docx
+MS SQL Notes - Constraint and Join.txt
+
+web applicaton (facebook) / GUI/Frontend  : java, .net, php 
+========================================
+
+Backend/Database 			  : My SQL Server, Oracle etc.
+========================================
+
+
+My SQL Server  
+==============	
+SQL  : structural query language 
+Server : physical location/repository where data can be stored
+
+
+Database : collection of data in tabular format and different types of objects (table,function,view etc.)
+
+Table: (worksheet) is combination row and column
+
+**: product
+		pid pname price
+**: customer 
+		customerid fname lname address 
+
+
+127.0.0.1 : localsystem server 
+3306	  : port no.
+
+
+
+> databases;   		      : show list of databases
+> create database <dbname>;   : create new database 
+> use <dbname>; 	      : switch database 
+> show tables;		      : show list of tables;
+> create table <tblname>
+	(
+	 col1   datatype, 
+	 col2   datatype,
+	 col3   datatype,
+	 col4   datatype
+	);
+
+
+> insert into <tblname>(pid,pname) values(1,'dove');
+> select * from <tblname>;  : view data  , * show all columns
+> select pid,pname from <tblname> ;    : projection 
+> select pid,pname from <tblname> where pid =1;  : slection 
+> desc <tblname>;		: show structure of table
+> update <tblname> set pname ='dove new' where pid=1;
+> delete from <tblename>   : remove all rows
+> delete from <tblename>   where pid =1;   : remove selected rows
+
+>drop table <tblename>;   remove table structure with data 
+>truncate table <tblname>;  remove all rows but structure will remain same, truncate doesn't support where caluse 
+> alter table <tblname> add brandname varchar(100);
+
+
+
+***
+SQL Command type :
+i.   DDL : data defintion language
+		-create  *
+		-alter   *
+		-drop    *
+		-truncate *
+ii.  DML : data manipulation language
+		-insert  *
+		-update	 *
+		-delete  *
+iii. DCL : data control language
+		-create user
+		-grant access
+		-revoke access
+iv.  TCL : transaction control lanuage
+		-begin transaction 
+		-commit
+		-rollback
+v.   DQL : data query language
+		-select   *
+
+
+where clause:   filter the rows / apply condition 
+operator    :    
+	Arithmetic: 		+ - * / %  	
+	Conditinal/Logical:   > >= < <= =  !=  or <>
+	Logical Operator:	 and   
+				 or 
+	Keywords:	
+				in 
+				not in
+				between 
+				not between
+				is null
+				is not null
+wildcard/pattern match:
+				like  = 'a%'   :start with a
+				like = 'a___'  :start with a but only 3char after a 
+ 
+
+order by: to arrange/sort data in ascending and descending order / sorting 
+	select * from <tblname> order by pname desc;
+
+			
+group by: 
+		select brandname, count(*) from proudct group by brandname;		
+having:
+		apply filter after group by
+		-having can be used only with group by 
+functions  :
+			count()
+			max()
+			min()
+			avg()
+			sum()
+
+			len()
+			upper()
+			lower()
+			replace()
+			left()
+			right()
+
+			now()
+		
+join: to merge two or more than two tables horizentally 
+	- at least one column must be same logically in tables 
+	
+There are following types of join:
+	i. inner join 		: return common rows/matching rows 
+	ii. outer join 
+		a. left join 	: common rows + rest rows from left table 
+		b. right join 	: common rows + rest rows from right table 
+
+
+other type of join:
+	-cartisan product
+	-self join 
+
+
+
+--inner join 
+select e.eid,e.name,e.dob,s.hra,s.basic
+from emp as e inner join salary as s
+	on e.eid = s.employeeid ;
+
+
+		
+--left join 
+select e.eid,e.name,e.dob,s.hra,s.basic
+from emp as e left join salary as s
+	on e.eid = s.employeeid ;
+
+			 
+
+--left join 
+select e.eid,e.name,e.dob,s.hra,s.basic
+from emp as e right join salary as s
+	on e.eid = s.employeeid;
+
+
+
+--three table 
+select e.eid,e.name,e.dob,s.hra,s.basic,d.departname 
+from emp as e inner  join salary as s
+	on e.eid = s.employeeid
+left join deplartment as d
+	on e.did = d.id;
+
+
+
+--cross join 
+select * from emp, salary;
+select * from emp, salary where emp.eid = salary.employee;
+
+
+--self join 
+empoyee:
+	eid ename mgrid
+	1    raman  null
+	2    nitin  1
+	3    rahul  1
+	4    chahat 2
+	
+
+
+	output :
+	eid ename  mgrid mgrname 
+	1   raman   null   null
+	2   nitin   1      raman 
+	
+
+
+select e.eid, e.ename, e.mgrid, m.name as mgrname 
+from emp as e left join emp as m 
+	on e.mgrid = m.eid;
+
+
+
+ 
+
+	
+
+***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
