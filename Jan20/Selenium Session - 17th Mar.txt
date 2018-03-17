@@ -1,0 +1,202 @@
+Selenium Session
+==========================
+1. Junit Test case & Junit Test Suite
+2. Wait & Types of Wait
+3. Assertion
+
+1. Junit Test case & Junit Test Suite
+======================================
+Junit is framework(is set of predefind functions/classess/library)
+	-to develop/write the code on one standard 
+	
+There are following types of Junit Class:
+	i. junit test case   : indivisual test case / scenario 
+			     : within this class testcase can be implemented 
+
+	ii. junit suite      : reference of Junit test case classes
+
+
+Annotation 
+	@BeforeClass		: 1		- will execute once 
+	@Before			: 2		- will execute before every @Test 
+	@Test			: 3		- @Test can be multiple 
+	@Ignore 		: 		- can be used with @Test, to skip the test 
+	@After			: 4		- will execute after every @Test once 
+	@AfterClass		: 5		- will execute 
+
+		
+
+Junit Report : 
+	summary of execution 
+	
+
+
+
+Wait and Types of wait
+===============================================
+	
+
+There is 2 different way to handle this using waits:
+
+1. Implicit Waits
+2. Explicit Waits
+
+
+1. Implicit Waits
+
+WebDriver waits for an element if they are not immediately available. So, WebDriver does not throw NoSuchElementException immediately. This is known as implicitlyWait(). This can be achieved using:
+
+
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+
+Important Note:
+
+1. If the DOM is get loaded within the wait time it should not wait for the remaining time it go for the next step,
+for an example:
+
+Here we wait for 20 seconds, after that it gives NoSuchElementException. If the element present in 5 second then it should not wait for another 15 seconds.
+
+Disadvantages:
+(i) In any case, it blindly wait for given seconds.
+(ii) Once set, the implicit wait is set for the life of the WebDriver object instance.
+
+
+2. Explicit Waits
+
+
+A. Thread.sleep()
+
+This is to wait the running program for sometime, this can be done using:
+
+Ex.- Thread.sleep(10000).
+
+Disadvantages:
+(i) In this case, it again blindly wait for given seconds. It is not a better way because if the the element is present within this given wait time, program does not move further until the wait time finished.
+(ii) Some computers are slow, an element may not show up in a slow computer within the given wait time.
+3.It is sleep time for script, not good way to use in script as it sleeps without condition.
+
+B. Expected Condition
+
+
+1. An explicit wait is code you define to wait for a certain condition to occur before proceeding further in the code. There are some convenient methods provided that help you to write code that will wait only as long as required. WebDriverWait in combination with ExpectedCondition is one way this can be accomplished.
+
+Ex.- WebDriverWait wait = new WebDriverWait(driver, 15);
+
+WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("AB")));
+
+This waits up to 15 seconds before throwing a TimeoutException or if it finds the element will return it in 0 – 15 seconds. WebDriverWait by default calls the ExpectedCondition every 500 milliseconds until it returns successfully. A successful return is for ExpectedCondition type is Boolean return true or not null return value for all other ExpectedCondition types.
+
+Note : This example is also functionally equivalent to the first Implicit Wait example.
+
+2. There are some common conditions that are frequently come across when automating web browsers. Listed below are Implementations of each. Java happens to have convienence methods so you don’t have to code an ExpectedCondition class yourself or create your own utility package for them.
+
+– Element is Clickable – it is Displayed and Enabled.
+
+
+Ex.- WebDriverWait wait = new WebDriverWait(driver, 15);
+ 
+WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id()));
+
+
+3. Fluent Wait Command: Each FluentWait instance defines the maximum amount of time to wait for a condition, as well as the frequency with which to check the condition. Furthermore, the user may configure the wait to ignore specific types of exceptions whilst waiting, such as ‘NoSuchElementExceptions’ when searching for an element on the page.
+
+
+************* imps *************
+
+Ex.- 
+	Wait wait = new FluentWait(driver)
+	.withTimeout(30, SECONDS)
+	.pollingEvery(5, SECONDS) 
+	.ignoring(NoSuchElementException.class);
+ 
+wait.until(ExpectedConditions.elementToBeClickable(By.id()));
+
+PageLoadTimeout Command:
+Purpose: Sets the amount of time to wait for a page load to complete before throwing an error. If the timeout is negative, page loads can be indefinite.
+
+Ex.- driver.manage().timeouts().pageLoadTimeout(500, SECONDS);
+
+
+
+Wait for page to load implementation
+Selenium Webdriver doesn't provide any inherent support for wait till page load implementation. But we can make use of Explicit Waits to achieve the desired outcome. For this, we need to identify the element on the webpage that's the last one to load or become available for intercation. Now, we need to use the explicit wait with the appropriate Expected condition like "ElementToBeClickable" for page load implementation. Thus, making sure that the driver waits till all the web elements get loaded successfully before attempting to interact with them.
+
+WebDriverWait wait = new WebDriverWait(driver, 20);
+wait.until(ExpectedConditions.elementToBeClickable(lastElementToLoad));
+
+
+Assertions  
+=================================================
+Assertions verify that the state of the application is same to what we are expecting. Selenium Assertions can be of three types: “assert”, “verify”, and ” waitFor”. When an “assert” fails, the test is aborted. When a “verify” fails, the test will continue execution, logging the failure.
+
+Hard Assertion In Webdriver Using TestNg
+
+A hard assert throw AssertException immediately after a test fails and the test is marked as failed. Perhaps test suite continues with next @Test annotation. A hard assertion can be of following types:
+
+assertEquals
+assertNotEquals
+assertTrue
+assertFalse
+assertNull
+assertNotNull
+
+Assert.assertEquals(actual,expected);
+Assert.assertNotEquals(actual,expected,Message);
+Assert.assertTrue(condition);
+Assert.assertFalse(condition);
+Assert.assertNull(object);
+Assert.assertNotNull(object);
+
+
+====
+Soft Assertion In WebDriver Using TestNg
+Till now, we have learnt about the hard assertions in WebDriver using testNg framework. In a hard assertion, when the assertion fails it terminates/aborts the test(method). But, what if we want to run the entire program? What if, we want to report fail test in testNg report but do not want to terminate the script at any case? It is not really possible if we use hard assertions. So, to overcome this drawback of hard assertion we can use soft assertions in testNg.
+To use a soft assertion in testNg, we have to include it’s corresponding class (as SoftAssert()) in the script. This class prevents the execution to throw any exception (of assertion). Also, the most important context is, now the failed assertions will be reported in the testNg report and not making the test to abort anywhere.
+Let’s see an example of soft assertion in testNg. Also, try to look at the difference between the two assertion and which assert should be used when.
+
+package hardAndSoftAssertion;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+public class HardAssertion {
+    SoftAssert softAssert = new SoftAssert();
+    @Test
+    public void hardAssertion(){
+        Assert.assertEquals("pass","pass");
+        System.out.println("This line is executed because assertEquals "
+                + "passed as both the strings are same");
+        Assert.assertNull("assertion");
+        System.out.println("Since the object under assertion"
+                + " is not null, the assertion will fail. "
+                + "This line will not be executed");
+    }
+    @Test
+    public void softAssertion(){
+         
+        softAssert.assertNull("assertion");
+        System.out.println("We are using Soft assertion in this method,"
+                + " so this line of code will also be executed even if "
+                + "the assetion fails.Wherever we want to execute full "
+                + "testcase/method, we should use SoftAssertion");
+        softAssert.assertAll();
+    }
+     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
