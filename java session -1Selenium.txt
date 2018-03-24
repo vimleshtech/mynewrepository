@@ -1,0 +1,136 @@
+Selenium Environment
+===========================
+Selenium : is library or api for web automation 
+Component of selenium:
+
+-Selenium IDE		: is plug for record and play
+-Selenium webdriver	: scripting/framework dev
+-Selenium RC/Grid 	: multiple browser testing/remote control
+
+
+Language to develop or automate the project:
+
+-java
+-python
+-ruby
+-php
+-c#
+-js
+etc.
+
+Java 
+======================
+Environment setup:
+
+-jdk (java development kit)
+	: 1.9, 1.8....
+	path:
+	C:\Program Files\Java
+-Eclipse (IDE-integrated development environment)
+	:Eclipse Neon 3,2,1
+	: Mars 
+	: Luna
+	: Galalio
+	etc.
+	
+
+Java Project's Structure 
+===========================
+Project1
+		-src	: source code
+			package: is collection of class or known as module
+
+					test.java
+					test2.java
+		
+			package
+		-jre 	: java runtime environment
+		
+
+Keyword/Identifier
+============================
+package : reference of current folder 
+public  : access specifier 
+class	: wrapper of data member and function 	
+static	: can be access without object 
+void 	: no return 
+main	: reserved function /start 
+String	: data type 
+etc.
+
+
+Syntax
+========================
+//	- single line comment
+/*
+	- multiple line comment
+*/
+;	- termination of satement
+[]	- array
+{}	- body of class, function , condition , loop etc.
+()	- condition , loop, function 
+
+*** java is case sensetive 
+
+
+=======================================
+First Program
+
+
+
+Data Type
+=======================================
+Scope of variable:
+	-global
+		-instance variable
+		-static variable
+
+	-local variable 
+	
+
+Type:
+	primitive	: single value
+		numeric without decimal :
+			byte			: 1 byte
+			short			: 2 		
+			int			: 4
+			long			: 8
+		numeric with decimal : 
+			float			: 4	:123.22f
+			double			: 8
+		alpha numeric:	
+			char			: 2	'a' , '1', '$'	
+		bit/binary:
+			boolean			: 1 
+ 
+	non-primitive 	: multiple values 
+		arraylist
+		list
+		haspmap
+		etc.
+
+			
+Operator
+===================
+Arithmetic:
+	+ - * / %
+
+Conditional:
+	> >= < <= == !=
+
+
+Logical:
+	&&  , ||
+
+
+
+Conditional statment
+========================
+-if condition 
+-swtich case 
+ 		 
+			
+
+
+
+
