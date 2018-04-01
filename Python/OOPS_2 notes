@@ -1,0 +1,44 @@
+-constructor
+-deconstructor
+-inheritence
+
+-function with argument
+		
+-function types
+		-no argument no return
+		-no argument with return 
+		-argument with no return
+		-argument with return 
+-default argument 
+		-def funname(self,a,n=0):
+				# here n is variable which is not mandat.
+		
+ 
+-constructor : is function which invoke automatically when object will create
+=================
+__init__()		: is inbuilt function/constructor 
+**constructor can take argument/cannot argument
+**constructor cannot have retrun type 
+
+
+-deconstructor: is function which invoke automatically when object will delete
+===================
+__del__(): is inbuilt function 
+
+
+del objectname 
+
+-inheritence	: to extend one class featues to another class 
+===============
+There are following types of inheritence:
+i. single level : A -> B
+ii. multi level : A -> B ->C .....
+iii. tree 	: A -> B,C,D -> M,N .....
+iv. hybrid 	: A -> B -> C       |    M ->N,
+v. multiple	: A,B,C -> D
+
+
+
+
+
+
