@@ -1,0 +1,109 @@
+MS SQL Server Type
+====================
+-Database Engine  	:  
+ *** MS BI ***
+-SSIS (SQL Server Integration Services)
+-SSRS (SQL Server Reporting Services)
+-SSAS (SQL Server Analysis Services)
+ 
+Client Server Architecture
+============================
+Client Tools : SSMS (SQL Server Management Studio)
+	     : free 
+Server       : -MS SQL Express		: free , (db size is 10gb)
+	       -MS SQL Enterprise Edition
+	       -MS SQL Standard Edition 
+		etc.	
+		
+
+Server name/IP Address and Instance
+========================================
+Example:
+	DH7U0SGH527SKS1\DBS91
+	
+Server: DH7U0SGH527SKS1  (computer name or ip address)
+Instance: DBS91
+
+Authentication Type
+========================
+	1. Windows Authentication : system/windows login id all use for sql login 
+	2. SQL Server : server account or other sql credentials will be used for login 
+
+
+
+Database & Schema Overview
+================================
+Database : is relational structure which holds data and different types of objects
+	 : database is also known as schema (group of objects)
+
+System Database & User database
+====================================
+System Database :
+	-master		: master is default database 
+	-tempdb
+	-model
+	-msdb 
+
+User database:
+	User Custom/App Database
+
+
+
+Database file system:
+========================
+	.mdf: main data file    : store data 
+	.ldf : log data file     : store transactional logs 
+
+
+
+DCL : data control language 
+==============================
+-create user 
+-grant access: provider access 
+-revoke access : remove access 
+
+TCL Statement (Begin transaction , commit, rollback)
+=======================================================
+-Begin Transaction : start recording
+-Commit : save transaction 
+-Rollback : cancel transaction 
+
+
+example:
+
+begin tran  -- begin transaction 
+
+
+		delete from emp 
+
+		select * from emp 
+
+
+rollback  --cancel transaction 
+--or 
+commit  -- final save 
+
+
+Case When
+=======================
+select 
+ id
+,name
+,case when gender ='m'
+      then 
+			'male'
+	  else 
+		'female'
+	  end 
+from employee
+
+
+
+
+
+
+
+
+
+
+
