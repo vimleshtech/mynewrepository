@@ -1,0 +1,329 @@
+Method Summary
+We provide a number of the common statistical functions:
+
+Method	Description
+count()	Number of non-null observations
+sum()	Sum of values
+mean()	Mean of values
+median()	Arithmetic median of values
+min()	Minimum
+max()	Maximum
+std()	Bessel-corrected sample standard deviation
+var()	Unbiased variance
+skew()	Sample skewness (3rd moment)
+kurt()	Sample kurtosis (4th moment)
+quantile()	Sample quantile (value at %)
+apply()	Generic apply
+cov()	Unbiased covariance (binary)
+corr()	Correlation (binary)
+
+
+
+
+# corellation 
+In [15]: frame = pd.DataFrame(np.random.randn(1000, 5), columns=['a', 'b', 'c', 'd', 'e'])
+
+In [16]: frame.iloc[::2] = np.nan
+
+# Series with Series
+In [17]: frame['a'].corr(frame['b'])
+Out[17]: 0.013479040400098794
+
+In [18]: frame['a'].corr(frame['b'], method='spearman')
+Out[18]: -0.0072898851595406371
+
+# Pairwise correlation of DataFrame columns
+In [19]: frame.corr()
+Out[19]: 
+          a         b         c         d         e
+a  1.000000  0.013479 -0.049269 -0.042239 -0.028525
+b  0.013479  1.000000 -0.020433 -0.011139  0.005654
+c -0.049269 -0.020433  1.000000  0.018587 -0.054269
+d -0.042239 -0.011139  0.018587  1.000000 -0.017060
+e -0.028525  0.005654 -0.054269 -0.017060  1.000000
+
+
+
+ ##Correlation Matrix
+ --------------------------------------------------
+If we’re using pandas we can create a correlation matrix to view the correlations between different variables in a dataframe:
+
+In [7]:
+import pandas as pd
+
+df = pd.DataFrame({'a': np.random.randint(0, 50, 1000)})
+df['b'] = df['a'] + np.random.normal(0, 10, 1000) # positively correlated with 'a'
+df['c'] = 100 - df['a'] + np.random.normal(0, 5, 1000) # negatively correlated with 'a'
+df['d'] = np.random.randint(0, 50, 1000) # not correlated with 'a'
+
+df.corr()
+Out[7]:
+a	b	c	d
+a	1.000000	0.825361	-0.948845	0.009802
+b	0.825361	1.000000	-0.789391	0.011852
+c	-0.948845	-0.789391	1.000000	-0.003228
+d	0.009802	0.011852	-0.003228	1.000000
+We can also view these correlations graphically as a scatter matrix:
+
+In [8]:
+pd.scatter_matrix(df, figsize=(6, 6))
+plt.show()
+
+Or we can directly plot a correlation matrix plot:
+
+In [9]:
+plt.matshow(df.corr())
+plt.xticks(range(len(df.columns)), df.columns)
+plt.yticks(range(len(df.columns)), df.columns)
+plt.colorbar()
+plt.show()
+
+
+###
+Line Charts in Matplotlib
+We start by importing matplotlib and display all visuals inline
+
+In [1]:
+import matplotlib.pyplot as plt
+%matplotlib inline
+We’ll use the ggplot style in this example for aesthetics
+
+In [2]:
+plt.style.use('ggplot')
+A simple plot of y = cos(x) between −π and π
+In [3]:
+import math
+import numpy as np
+
+X = np.arange(-math.pi, (math.pi + 0.05), 0.05)
+
+cos_x = np.cos(X)
+
+plt.plot(X, cos_x)
+plt.show()
+
+Plotting multiple lines
+Plotting multiple lines is as simple as calling plt.plot() more than once
+
+In [4]:
+x = np.arange(0, 9)
+y1 = 2 ** x
+y2 = 256 / 2 ** x
+y3 = y1 + y2
+
+plt.plot(x, y1, 'g-')
+plt.plot(x, y2, 'r-.')
+plt.plot(x, y3, 'b:')
+
+plt.show()
+
+Labels
+We can provide labels for the x and y axes and for each of our lines
+
+In [5]:
+X = np.arange(-math.pi, (math.pi + 0.05), 0.05)
+
+cos_x = np.cos(X)
+sin_x = np.sin(X)
+
+plt.plot(X, cos_x, label='cosine x')
+plt.plot(X, sin_x, label='sine x')
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.title("Sin(x) vs Cos(x)")
+
+plt.legend(loc='upper left')
+
+plt.show()
+
+
+
+
+Scatter Charts in Matplotlib
+We start by importing matplotlib and display all visuals inline, using the ggplot style sheet.
+
+In [1]:
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+plt.style.use('ggplot')
+Scatter plots take 2 equal length arrays as input
+
+In [2]:
+import numpy as np
+
+x = np.random.rand(100) * 10
+y = x * np.random.rand(100) * 5
+plt.scatter(x, y)
+plt.plot()
+
+Plotting multiple x’s
+If we had multiple series we wanted to plot on the same axes, we can pass them all to plt.scatter() before calling plt.show()
+
+In [3]:
+from sklearn import datasets
+import pandas as pd
+
+# Load some data
+iris = datasets.load_iris()
+iris_df = pd.DataFrame(iris['data'], columns=iris['feature_names'])
+iris_df['species'] = iris['target']
+
+colours = ['red', 'orange', 'blue']
+species = ['I. setosa', 'I. versicolor', 'I. virginica']
+
+for i in range(0, 3):    
+    species_df = iris_df[iris_df['species'] == i]    
+    plt.scatter(        
+        species_df['sepal length (cm)'],        
+        species_df['petal length (cm)'],
+        color=colours[i],        
+        alpha=0.5,        
+        label=species[i]   
+    )
+
+plt.xlabel('sepal length (cm)')
+plt.ylabel('petal length (cm)')
+plt.title('Iris dataset: petal length vs sepal length')
+plt.legend(loc='lower right')
+
+plt.show()
+
+
+
+Bar Charts in Matplotlib
+Bar charts are used to display values associated with categorical data.
+
+The plt.bar function, however, takes a list of positions and values, the labels for x are then provided by plt.xticks().
+
+In [1]:
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.style.use('ggplot')
+
+x = ['Nuclear', 'Hydro', 'Gas', 'Oil', 'Coal', 'Biofuel']
+energy = [5, 6, 15, 22, 24, 8]
+
+x_pos = [i for i, _ in enumerate(x)]
+
+plt.bar(x_pos, energy, color='green')
+plt.xlabel("Energy Source")
+plt.ylabel("Energy Output (GJ)")
+plt.title("Energy output from various fuel sources")
+
+plt.xticks(x_pos, x)
+
+plt.show()
+
+Error bars
+We can extend the above with error bars as follows
+
+In [2]:
+x = ['Nuclear', 'Hydro', 'Gas', 'Oil', 'Coal', 'Biofuel']
+energy = [5, 6, 15, 22, 24, 8]
+variance = [1, 2, 7, 4, 2, 3]
+
+x_pos = [i for i, _ in enumerate(x)]
+
+plt.bar(x_pos, energy, color='green', yerr=variance)
+plt.xlabel("Energy Source")
+plt.ylabel("Energy Output (GJ)")
+plt.title("Energy output from various fuel sources")
+
+plt.xticks(x_pos, x)
+
+plt.show()
+
+Horizontal Bar Chart
+We can show the exact same chart horizontally using plt.barh()
+
+In [3]:
+x = ['Nuclear', 'Hydro', 'Gas', 'Oil', 'Coal', 'Biofuel']
+energy = [5, 6, 15, 22, 24, 8]
+variance = [1, 2, 7, 4, 2, 3]
+
+x_pos = [i for i, _ in enumerate(x)]
+
+plt.barh(x_pos, energy, color='green', xerr=variance)
+plt.ylabel("Energy Source")
+plt.xlabel("Energy Output (GJ)")
+plt.title("Energy output from various fuel sources")
+
+plt.yticks(x_pos, x)
+
+plt.show()
+
+Bar Chart with Multiple X’s
+To include multiple X values on the same chart, we can reduce the width of the bars and then place the indices one bar’s width further from the y axis.
+
+In [4]:
+import numpy as np
+
+N = 5
+men_means = (20, 35, 30, 35, 27)
+women_means = (25, 32, 34, 20, 25)
+
+ind = np.arange(N) 
+width = 0.35       
+plt.bar(ind, men_means, width, label='Men')
+plt.bar(ind + width, women_means, width,
+    label='Women')
+
+plt.ylabel('Scores')
+plt.title('Scores by group and gender')
+
+plt.xticks(ind + width / 2, ('G1', 'G2', 'G3', 'G4', 'G5'))
+plt.legend(loc='best')
+plt.show()
+
+Stacked Bar Chart
+With stacked bar charts we need to provide the parameter bottom, this informs matplotlib where the bar should start from, so we will add up the values below.
+
+In [5]:
+countries = ['USA', 'GB', 'China', 'Russia', 'Germany']
+bronzes = np.array([38, 17, 26, 19, 15])
+silvers = np.array([37, 23, 18, 18, 10])
+golds = np.array([46, 27, 26, 19, 17])
+ind = [x for x, _ in enumerate(countries)]
+
+plt.bar(ind, golds, width=0.8, label='golds', color='gold', bottom=silvers+bronzes)
+plt.bar(ind, silvers, width=0.8, label='silvers', color='silver', bottom=bronzes)
+plt.bar(ind, bronzes, width=0.8, label='bronzes', color='#CD853F')
+
+plt.xticks(ind, countries)
+plt.ylabel("Medals")
+plt.xlabel("Countries")
+plt.legend(loc="upper right")
+plt.title("2012 Olympics Top Scorers")
+
+plt.show()
+
+If we wanted to view the same bar charts but as a proportion of the total medals won by that country, we can do the following:
+
+In [6]:
+total = bronzes + silvers + golds
+proportion_bronzes = np.true_divide(bronzes, total) * 100
+proportion_silvers = np.true_divide(silvers, total) * 100
+proportion_golds = np.true_divide(golds, total) * 100
+
+plt.bar(ind, proportion_golds, width=0.8, label='golds', color='gold', bottom=proportion_bronzes+proportion_silvers)
+plt.bar(ind, proportion_silvers, width=0.8, label='silvers', color='silver', bottom=proportion_bronzes)
+plt.bar(ind, proportion_bronzes, width=0.8, label='bronzes', color='#CD853F')
+
+plt.xticks(ind, countries)
+plt.ylabel("Medals")
+plt.xlabel("Countries")
+plt.title("2012 Olympics Top Scorers' Medals by Proportion")
+plt.ylim=1.0
+
+# rotate axis labels
+plt.setp(plt.gca().get_xticklabels(), rotation=45, horizontalalignment='right')
+
+plt.show()
+
+
+
+
+
+
+
