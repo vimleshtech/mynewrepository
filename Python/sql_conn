@@ -1,0 +1,69 @@
+Database connectivity
+	** sql : 
+	-ddl (data defination language) : create, alter , drop , truncate
+	-dml (data manipulation language): insert, update, delete
+	-dql (data query language): select
+
+
+
+	*where
+	*order by
+	* group by
+
+
+	emp:
+	id name
+	1   ancd
+	2  xyz
+
+	-truncate : remove all rows from table , but structure will remain same
+	trucate table emp;
+	
+
+	-drop table emp : data with structue will be gone 
+
+
+
+
+Python Module
+=================
+-mysql
+-mysqlserver
+
+
+-open cmd/command line
+-cd ..   : go to back
+-cd python27
+-cd Scripts 
+
+$pip install modulename
+
+
+Python My SQL Connector / Driver
+====================
+.exe
+	https://dev.mysql.com/downloads/connector/python/
+	
+
+
+database server
+====================
+-my sql server
+		
+	IP Address/Computer Name / DB Server name : 	127.0.0.1  or localhost 
+	Port					  :     3306 
+	database				  :     world
+	userid					  :     root
+	password				  :     root
+
+
+		select * from 
+
+
+
+
+
+
+
+
+
