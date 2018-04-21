@@ -1,0 +1,90 @@
+'''
+pandas : is data frame or table
+id name gender
+1   jhsjhg
+'''
+
+import pandas as pd
+
+emp = [[1,'nitin','male',44444],[2,'chahat','female',543333],[3,'raman','male',997666]]
+
+# columns : header
+#data  : data souce
+df = pd.DataFrame(data=emp,columns=['id','name','gender','salar'])
+
+print(df)
+
+
+#print list of columns
+print( df.columns)
+
+#prin top 2 rows
+print( df.head(n=2))
+
+#print from bottom
+print( df.tail(n=1))
+
+
+#print particular columns
+print( df['name'])
+
+#describe or print stats of tables
+'''
+for all numeric columns 
+-count
+-min
+-max
+-25%
+-50%
+-75%
+'''
+print(df.describe())
+
+
+## group by
+print( df.groupby('gender').size())
+print( df.groupby('gender').sum())
+print( df.groupby('gender').max())
+print( df.groupby('gender').min())
+
+
+'''
+
+## order by
+print(df.where('gender'=='male'))
+
+print(df.where('salary'>500000 ))
+
+print(df.where('salary'>500000 ))
+
+
+'''
+# how to reead data from csv.(comma seperate version)
+d = pd.read_csv('C:\Users\chira\Desktop\emp.csv',sep=",")
+
+print(d)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
