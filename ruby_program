@@ -1,0 +1,226 @@
+If condition 
+=====================
+-if condition 
+-if else
+-if elseif else 
+-nested 
+
+
+--if elseif else 
+
+x = 1
+
+if x > 2 
+
+   puts "x is greater than 2"
+
+elsif x <= 2 and x!=0
+
+   puts "x is 1"
+
+else
+
+   puts "I can't guess the number"
+
+end
+
+
+Loop : is iterator or repeation of statment
+
+==================
+#!/usr/bin/ruby
+
+$i = 0   # init
+$num = 5
+
+while $i < $num  do   # condition
+  
+
+ 	puts("Inside the loop i = #$i" )
+	$i +=1     # incrementer
+
+
+end
+
+--do while 
+====
+#!/usr/bin/ruby
+
+$i = 0  # init 
+$num = 5   
+
+begin		# start 
+
+
+   puts("Inside the loop i = #$i" )
+   $i +=1		# incrementer
+
+end while $i < $num
+
+--untill 
+=====
+#!/usr/bin/ruby
+
+$i = 0
+$num = 5
+
+until $i > $num  do
+   puts("Inside the loop i = #$i" )
+   $i +=1;
+end
+
+
+====
+$i = 0
+$num = 5
+begin
+   puts("Inside the loop i = #$i" )
+   $i +=1;
+end until $i > $num
+
+
+--for loop 
+=====
+#!/usr/bin/ruby
+
+for i in 0..50   # from 0 to 49
+   puts "Value of local variable is #{i}"
+end
+
+
+--for  each 
+===
+(0..5).each do |j|
+
+   puts "Value of local variable is #{j}"
+
+end
+
+###break  : terminate the iteration when condition will match / true 
+===
+
+for i in 0..5
+   if i > 2 then
+      break
+   end
+   puts "Value of local variable is #{i}"
+end
+
+# next : skip the iteration when condition is true 
+===
+#!/usr/bin/ruby
+
+for i in 0..5
+   if i < 2 then
+      next
+   end
+   puts "Value of local variable is #{i}"
+end
+
+
+==
+Ruby redo Statement
+
+Syntax
+redo
+Restarts this iteration of the most internal loop, without checking loop condition. 
+
+Restarts yield or call if called within a block.
+
+# redo : to restart he interation / block of code 
+Example
+#!/usr/bin/ruby
+
+for i in 0..5
+   if i < 2 then
+      puts "Value of local variable is #{i}"
+      redo
+   end
+end
+
+
+#retry : rerun the entire code 
+===
+Ruby retry Statement
+Syntax
+retry
+If retry appears in rescue clause of begin expression, restart from the beginning of 
+
+the begin body.
+
+begin
+   do_something # exception raised
+rescue
+   # handles error
+   retry  # restart from beginning
+end
+
+
+==
+#!/usr/bin/ruby
+
+   for i in 0..5
+      if i > 2
+puts "Value of local variable is #{i}"
+end
+
+===================================================
+function : is set of instructions or code or command to acheive the particular 
+
+requirement
+===================================================
+
+syntax:
+
+def funname(arg1, arg2)
+
+	expression 
+end
+
+call to fun:
+
+funmae (1,2)
+
+====
+#!/usr/bin/ruby
+
+def test(a1 = "Ruby", a2 = "Perl")  # argument with default variable 
+   puts "The programming language is #{a1}"
+   puts "The programming language is #{a2}"
+end
+
+test "C", "C++"
+test
+
+#function with return type 
+===
+def test  # without argument 
+
+   i = 100
+   j = 200
+   k = 300
+return i, j, k
+
+
+end
+
+var = test
+
+puts var
+
+
+
+============
+#!/usr/bin/ruby
+
+class Sample
+   def hello
+      puts "Hello Ruby!"
+   end
+end
+
+# Now using above class to create objects
+object = Sample. new
+object.hello
+
+
