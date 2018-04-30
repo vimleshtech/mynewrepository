@@ -1,0 +1,84 @@
+import re
+
+
+f=open(r"C:\Users\vkumar15\Desktop\emp.txt","r")
+print(f)
+#print(f.read())
+#print(f.readline())
+
+#print(f.readlines())
+
+data = f.readlines()
+
+ic = 0
+uc = 0
+
+for row in data:
+     #print(row)
+     col = row.split(' ')
+     print(col)
+     if col[2] == 'India':
+          ic = ic+1
+     elif col[2] == 'Us':
+          uc = uc+1
+
+
+print('India ',ic)
+print('Us ',uc)
+
+
+          
+     
+'''
+Regular expression : is known as pattern matching
+
+
+hi this is python code
+
+is : must be there
+
+
+python module
+---------
+re : module
+match(): function
+groups(): function
+search(): function 
+
+
+format:
+
+/d  : digit
+/D  : non digit 
+[0-9] : digit
+/w : words/chars
+/W : non chars
+
+^  : start
+$  : end
+{2,10}  : length  : 2 min , 10 max
+*        : multiple times
+?        : may or may not\
+()       : group
+.        : anything 
+etc.
+
+'''
+
+
+
+
+
+line = "Cats are smarter than dogs"
+
+matchObj = re.match( r'(.*) are (.*?) .*', line)
+
+if matchObj:
+   print ("matchObj.group() : ", matchObj.group())
+   print ("matchObj.group(1) : ", matchObj.group(1))
+   print ("matchObj.group(2) : ", matchObj.group(2))
+else:
+   print ("No match!!")
+   
+
+
