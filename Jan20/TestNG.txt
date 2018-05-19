@@ -1,0 +1,90 @@
+How to set version 
+
+TestNG : is framework 
+===========
+
+1. How to add / install TestNG in Eclipse
+
+	Go to help menu -> Eclipse Market Place 
+	
+
+
+2. TestNG (test next generation) Annotation 
+
+
+@BeforeSuite		: 1			-execute one time
+@AfterSuite		: 	9		-execute one time
+@BeforeTest		:2			-execute one time
+@AfterTest		:	8		-execute one time
+@BeforeClass		:3			-execute one time
+@AfterClass		:	7		-execute one time
+@BeforeMethod		:4			-execute for every @Test 
+@AfterMethod		:	6		-execute for every @Test
+@Test			:5			-this can multiple in one class 
+
+@DataProvider 		: collection of data which we can pass to @Test method 
+			: with @Test if dependency is exist 
+
+
+3. Propeties in TestNg
+
+-priority	: 0 to 10 (high - low)
+
+	void test10(){}
+
+	@Test(priority=1)
+	void login){}
+		
+	void test20(){}
+	void logout(){}
+
+	@Test(priority=2)
+	void serach(){}
+	void test1(){}
+
+-enable
+	@Test(priority=2,enabled=false)
+	void serach(){}
+	
+
+-Groups 
+
+	*one @Test function can be part of multiple group 
+
+
+
+
+	@Test(priority=2,groups={"login"})		
+	void test10(){}
+
+	@Test(priority=1,groups={"search"})
+	void login){}
+
+	@Test(groups={"login"})				
+	void test20(){}
+	void logout(){}
+
+	@Test(priority=2,groups={"search","login"})
+	void serach(){}
+
+	@Test(priority=2,groups={"login"})		
+	void test1(){}
+		
+-dependency
+	:onMethods
+	@Test(dependsOnMethod={"login","2ndfun"})		
+	void test1(){}
+
+	:onGroups
+	@Test(dependsOnGroups={"login"})		
+	void test1(){}
+
+
+
+-suite : is configuration file which manage the test classes/methods/groups etc.
+
+
+	testng.xml
+
+	
+	
