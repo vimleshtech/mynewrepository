@@ -1,0 +1,44 @@
+SQL(Structured Query Language)
+Types of command:
+1.DDL(Data Definition Language) Create,Alter,Drop,Truncate
+2.DML(Data Manipulation Language) Select,Insert,Update,Delete
+3.DCL(Data Control Language)Grant,Revoke
+4.TCL(Transaction Control Language) Begin,Commit,Rollback
+
+-----------------------------------------------------------------------------------------------------------------------
+create database test
+
+use test
+
+create table emp(
+id int,
+name varchar(30),
+doj date,
+salary int,
+dept varchar(30))
+
+
+select * from emp
+
+
+select id,name from emp
+
+select * from emp
+
+
+
+insert into emp values(1,'aman','12-01-2017',20000,'it')
+
+insert into emp values(2,'Chiranjit','04-23-2017',20000,'Ops')
+
+insert into emp values(3,'Mohit','07-21-2017',34000,'sales')
+
+insert into emp values(7,'Arun','12-09-2017',25000,'business development')
+
+select * from emp
+
+select id,doj from emp
+
+update emp set id=4 where name='arun' 
+
+delete from emp where id=3
