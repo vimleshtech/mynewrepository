@@ -1,0 +1,9 @@
+Web_app_server1  : IIS
+	ec2-34-210-151-77.us-west-2.compute.amazonaws.com
+	Administrator
+	%EV@tTUHfz5z)P*LZO2HSE@fuFX67B?E
+	
+Web_deb_server1  : Backend
+	ec2-35-162-25-66.us-west-2.compute.amazonaws.com
+	Administrator
+	
