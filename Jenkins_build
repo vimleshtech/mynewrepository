@@ -1,0 +1,29 @@
+Jenkins:
+==============================
+is CI(continous integration)/CD(continous deployment) tool
+
+
+url : https://jenkins.io/download/
+
+
+Step 1: 
+	login with admin user id and password
+
+Step 2: 
+	Install plugins 
+		** install suggested plugins 
+	
+Step 3: 
+	register/create user account
+	
+Step 4: 
+	create jenkins Jobs/Project
+		**Project types
+			1. FreeStyle
+			2. Maven Project
+				-there must be pom.xml
+			3. PipeLine	:
+				
+			etc.
+
+
