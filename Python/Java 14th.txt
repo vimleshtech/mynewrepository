@@ -1,0 +1,158 @@
+Data Type
+=============
+Primitive	:  is	single value
+
+	-----non decimal  ---- 
+	byte
+	short
+	int
+	long
+
+	-----decimal  ---- 	
+	float
+	double
+	
+	-----alpha numeric  ---- 
+	char
+
+	-----boolean/bit ---- 
+	boolean
+
+Inprimitive
+	Array
+	ArrayList
+	List
+	String
+
+	
+
+Operator
+=================
+Arithmetic:
+	+
+	-
+	*
+	/
+	%
+Conditional:
+	>
+	>=
+	<
+	<=
+	==
+	!=
+Logical:
+	&&
+	||
+Increment/Decrement:
+	++
+	--
+	
+	postfix
+		i++
+		i--
+	prefix:
+		++i
+		--i
+Assignment Operator:
+	=
+	+=		: a +=1   or a = a+1
+	-=
+	*=
+	etc
+Condition : is decision making statement 
+=================
+-if condition
+-swith case
+
+if condition 
+-----------------
+if condition
+{
+
+}
+
+
+if else 
+--------------
+if condition
+{
+	//true
+}
+else
+{
+	//false
+
+}
+
+
+//if else if else...
+if condition
+{
+
+}
+else if condition
+{
+
+}
+else
+{
+
+
+}
+
+//nested if 
+if condition:
+{
+	if condition
+	{
+
+
+	}
+	else
+	{
+
+	}
+
+}
+else
+{
+
+
+
+}
+
+
+-swith case
+-------------------------
+switch(key)
+{
+	case val:
+		...
+		break;
+	case val:
+		..
+		break
+	default:
+		...
+		break
+}
+
+Loop  : is iteration or repeation of statment 
+=========================
+Example:
+	1 2 ....100
+
+1	: init / start
+100	: limit / condition 
++1	: increment / decrement
+
+
+
+There are following types :
+i. while
+ii. for
+iii. do while
+iv. advance loop 
+
+
