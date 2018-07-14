@@ -1,0 +1,47 @@
+Framework: 
+	1. is standard approach to develop or implement the application 
+	2. is set of predefined rules or structure to  develop or implement the 	
+
+	application 
+	3. without frameoword our  code and data will be in same file, this will be 	
+
+difficult to manage 
+	Project's Structure
+	=====================
+	MyFramework:
+		-src
+			-testcases
+				-login.java
+				-register.java
+				-search.java
+				-addtokart.java
+				-payment.java
+				-vieworder.java
+			-logmanager
+				-log4j...
+				-testngLister.java
+			-utilities
+				-objectUtil.java
+				-webdriverUtils.java
+				-				
+			-dataaccess
+				-excelUtil.java
+				-dbUtil.java
+			-objects	
+				objects_keys.properties  : object repository
+						
+		-jre
+
+
+		testcase.xlsx
+		key_mapper.xlsx
+		objects_keys.properties
+
+
+ 
+
+====================
+API Calling  :API (application programing interface) is also known as web services
+		
+===================
+Project - Overview 
