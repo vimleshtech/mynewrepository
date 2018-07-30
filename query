@@ -1,0 +1,57 @@
+ACTBY
+	-
+	-
+	-
+SECTION
+
+JE C
+
+CFA
+
+IMP
+
+
+POST ADM
+
+
+PRE ADM :::::::::
+==========================
+STAGE PREADM
+============================
+::: 		_2
+
+:::::QRY_STAGEPREADM AUTO UPDATE
+:::::QRY SUM PRINT COMPLETE ZIST
+:::: REC
+
+RPT :CORRECT
+
+MODULES
+-------------------------
+
+PRE ADM
+REBBION PRE ADM
+
+CVRDE  : ERROR 
+	RIGHT CLICK DESIGN VIEW
+
+
+FORM:
+
+FRM LOGIN
+	FRM LOGIN DETAILS
+
+	OPTIONS:
+		VIEW 
+			ZIST
+			
+TBAL PERMISSIONS 
+
+BRIEF
+
+TABLE
+		PROPERTIES
+			DATA
+
+QUERY
+		QRY PREADM PRINTACT BYUSER_ZIST
